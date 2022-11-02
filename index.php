@@ -14,7 +14,3 @@
 	<h1>Esto es una prueba de titulo</h1>
 </body>
 </html>
-<?php
-$url= 'prueba.php';
-      echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-	  ?>
