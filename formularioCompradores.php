@@ -36,7 +36,7 @@
           </div class="alert alert-danger" role="alert">
           
           <div class="row justify-content-center my-1">
-            <form action="registrarVendedores.php" method="post" enctype="multipart/form-data" class="needs-validation"
+            <form action="registrarCompradores.php" method="post" enctype="multipart/form-data" class="needs-validation"
               novalidate>
               <div class="row justify-content-center my-1">
                 <div class="col-lg-5" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
