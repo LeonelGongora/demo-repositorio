@@ -32,17 +32,17 @@
 
             $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
             $img_upload_path = 'uploads/'.$new_img_name;
-			move_uploaded_file($tmp_name,'uploads/', $img_upload_path);
+			move_uploaded_file($tmp_name, $img_upload_path);
 
-            //$sql = "insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES('$Name','$password','$email','$number','$ubicacion','$descripcion')";
-			//mysqli_query($conn, $sql);
+            $sql = "insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES('$Name','$password','$email','$number','$ubicacion','$descripcion')";
+			mysqli_query($conn, $sql);
 
-            $stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) values(?, ?, ?, ?, ?, ?, ?)");
-		    $stmt->bind_param("sssisss", $Name, $password , $email, $number, $ubicacion, $descripcion, $new_img_name);
-		    $execval = $stmt->execute();
+            //$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) values(?, ?, ?, ?, ?, ?, ?)");
+		    //$stmt->bind_param("sssisss", $Name, $password , $email, $number, $ubicacion, $descripcion, $new_img_name);
+		    //$execval = $stmt->execute();
 		    //echo $execval;
 		    //echo "Registration successfully...";
-		    $stmt->close();
+		    //$stmt->close();
 		    $conn->close();
 	}else {
         echo "Sucedio un error";
