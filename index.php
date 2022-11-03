@@ -1,4 +1,35 @@
 
+<?php
+
+    //Get Heroku ClearDB connection information
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $cleardb_server = $cleardb_url["host"];
+    $cleardb_username = $cleardb_url["user"];
+    $cleardb_password = $cleardb_url["pass"];
+    $cleardb_db = substr($cleardb_url["path"],1);
+    $active_group = 'default';
+    $query_builder = TRUE;
+    // Connect to DB
+    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+
+if(!$conn){
+  echo "error de conexion";
+  exit;
+}
+
+$result = mysqli_query($conn,"SELECT NombreDeProducto,Precio,precioDeOferta,Stock,Descripcion FROM productos ");
+if(!$result){
+  echo "ocurrio un error";
+  exit;
+}
+
+for($i = 0; $resultado[$i] = mysqli_fetch_assoc($result); $i++) ;
+// Delete last empty one
+array_pop($resultado);
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,8 +72,9 @@
         </div>
       </nav>
  
-       <div class="container my-4">
+      <div class="container my-4">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+            <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?> 
               <div class="col">
                 <div class="card shadow-sm border-danger">
                   <div class="row justify-content-center ">
@@ -52,29 +84,29 @@
                           <img src=""  width="200" height="200">
                           
                             <div class="text-center">
-                               <h4> </h4>
+                               <h4> <?php echo $row['NombreDeProducto'];?> </h4>
                             </div>
                           
                         </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col">
+                    <div class="col">
                       <div class="card-body">
                         <div class="card mb-4 border-0 text-white bg-danger text-center rounded" >
                           <div class="card-body "> 
-                              Oferta: 
+                              Oferta: <?php echo $row['precioDeOferta'];?> Bs.
                           </div>
                         </div >
-                          <h6 class="card-text">Precio Normal: </h6>
-                          <h6 class="card-text">Stock: </h6>
-                          <p>  </p>
-                        </div>
+                          <h6 class="card-text">Precio Normal: <del><?php echo $row['Precio'];?></del> Bs.</h6>
+                          <h6 class="card-text">Stock: <?php echo $row['Stock'];?></h6>
+                          <p> <?php echo $row['Descripcion'];?> </p>
                       </div>
-                   </div>
+                    </div>
+                  </div>
                </div>
-            </div>
+              </div>
+          <?php } endif;?>
         </div>
-      </div>
     </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
