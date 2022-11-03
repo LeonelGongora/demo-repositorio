@@ -1,10 +1,10 @@
 
 <?php
-	$Name = $_POST['NombreNegocio']; 
-    $password = $_POST['password'];
-    $email = $_POST['Email'];
-	$number = $_POST['Telefono'];
-    $ubicacion = $_POST['Ubicacion'];
+	$nombre = $_POST['NombreDeProducto']; 
+    $precio = $_POST['Precio'];
+    $precioOferta = $_POST['PrecioDeOferta'];
+	$stock = $_POST['Stock'];
+    $descripcion = $_POST['Descripcion'];
 
     //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -22,8 +22,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into compradores(NombreNegocio, password,  Email, Telefono, Ubicacion) values(?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssis", $Name, $password , $email, $number, $ubicacion);
+		$stmt = $conn->prepare("insert into productos(NombreDeProducto, Precio, PrecioDeOferta, Stock, Descripcion) values(?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssss", $nombre, $precio , $precioOferta, $stock, $descripcion);
 		$execval = $stmt->execute();
 		//echo $execval;
 		//echo "Registration successfully...";

@@ -25,8 +25,6 @@
                     <form action="registrarProductos.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
                       <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
                         <div class="col-lg-5">
-
-
                             <div class="col">
                                <label for="NombreDeProducto" class="form-label">Nombre de Producto:</label>
                                <input type="text" name="NombreDeProducto" id="NombreDeProducto" class="form-control" pattern ="^[A-Z|a-z|0-9|\s|/]{3,20}$" required>
@@ -100,7 +98,7 @@
                         
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
-                                  <a href="paginaPrincipalConPerfil.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                  <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                               </div>
                               <div style="opacity: 0;">
                                 Textosasasa
