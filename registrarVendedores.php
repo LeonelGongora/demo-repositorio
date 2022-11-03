@@ -24,8 +24,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		$stmt = $conn->prepare("insert into registration(firstName, lastName,  email, password, number) values(?, ?, ?, ?, ?)");
 		$stmt->bind_param("ssssi", $firstName, $lastName, $email, $password, $number);
 		$execval = $stmt->execute();
-		echo $execval;
-		echo "Registration successfully...";
+		//echo $execval;
+		//echo "Registration successfully...";
 		$stmt->close();
 		$conn->close();
 	}
