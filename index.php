@@ -81,7 +81,7 @@ array_pop($resultado);
                     <div class="col">
                       <div class="card mb-1 border-0" >
                         <div class="card-body text-center" >
-                          <img src=""  width="200" height="200">
+                          <img src=""  width="180" height="180">
                           
                             <div class="text-center">
                                <h4> <?php echo $row['NombreDeProducto'];?> </h4>
