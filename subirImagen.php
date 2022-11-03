@@ -30,10 +30,8 @@
 			$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
 			$img_ex_lc = strtolower($img_ex);
 
-			
             $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-            $img_upload_path = 'uploads/'.$new_img_name;
-			move_uploaded_file($tmp_name, $img_upload_path);
+			move_uploaded_file($tmp_name,'uploads/', $new_img_name);
 
             $stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) values(?, ?, ?, ?, ?, ?, ?)");
 		    $stmt->bind_param("sssisss", $Name, $password , $email, $number, $ubicacion, $descripcion, $new_img_name);
