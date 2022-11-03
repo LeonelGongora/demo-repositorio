@@ -24,7 +24,7 @@
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <p style="opacity: 0;">Para rellenar</p>
-     </div>
+      </div>
     </div>
   </nav>
   

@@ -1,9 +1,11 @@
 <?php
-	$firstName = $_POST['firstName'];
-	$lastName = $_POST['lastName'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$number = $_POST['number'];
+	$Name = $_POST['NombreNegocio']; 
+    $password = $_POST['password'];
+    $email = $_POST['Email'];
+	$number = $_POST['Telefono'];
+    $ubicacion = $_POST['Ubicacion'];
+    $descripcion = $_POST['Descripcion'];
+    
 
     //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -21,8 +23,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(firstName, lastName,  email, password, number) values(?, ?, ?, ?, ?)");
-		$stmt->bind_param("ssssi", $firstName, $lastName, $email, $password, $number);
+		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion) values(?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssiss", $Name, $password , $email, $number, $ubicacion, $descripcion);
 		$execval = $stmt->execute();
 		//echo $execval;
 		//echo "Registration successfully...";
@@ -30,8 +32,6 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		$conn->close();
 	}
 
-    $url= 'prueba.php';
+    $url= 'paginaPrincipalVendedores.php';
       echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-
 ?>
-

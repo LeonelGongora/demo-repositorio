@@ -18,7 +18,7 @@
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
-        <a class="navbar-brand" href="paginaPrincipalCompradores.php">Imperfect Food</a>
+        <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
          </button>
@@ -29,7 +29,7 @@
                       Mi perfil
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="">Editar Perfil</a></li>
+                    <li><a class="dropdown-item" href="miPerfil.php">Ver Perfil</a></li>
                     <li><a class="dropdown-item" href="index.php">Cerrar Sesion</a></li>
                   </ul>
                 </li>
