@@ -21,7 +21,7 @@ session_start();
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
 
-   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', WHERE compradores.Email = '$emailactual'";
+   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion' WHERE compradores.Email = '$emailactual'";
    $resultado = $conn->query($query);
 
 	$url= 'index.php';
