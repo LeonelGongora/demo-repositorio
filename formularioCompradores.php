@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <div>
         <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
-        <a class="navbar-brand" href="paginaPrincipalCompradores.php">
+        <a class="navbar-brand" href="index.php">
           Imperfect Food
         </a>
       </div>
@@ -124,7 +124,7 @@
                   </div>
                   <div class="d-flex justify-content-center flex-nowrap my-3">
                     <div>
-                      <a href="paginaPrincipalCompradores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                      <a href="index.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                     </div>
                     <div style="opacity: 0;">
                       Textosasasa
@@ -138,7 +138,6 @@
             </form>
           </div>
       </div>
-      <br>
     </section>
   
   <script src="javascript/validacion.js"></script>

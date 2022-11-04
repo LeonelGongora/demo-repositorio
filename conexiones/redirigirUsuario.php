@@ -20,8 +20,6 @@
     $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
     $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
 
-    
-
     if (mysqli_num_rows($consultaVendedores) > 0){
         $url = '../paginaPrincipalVendedores.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
@@ -30,25 +28,7 @@
         $url= '../paginaPrincipalCompradores.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
-        $url= 'login.php';
+        $url= '../loginFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     } 
-
-    /* $tipoVendedor = "V";
-    $tipoComprador = "C";
-
-    echo $tipoUsuario;
-
-    if (strcmp($tipoUsuario, $tipoVendedor) === 0){
-        $url = 'paginaPrincipalVendedores.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    }
-    elseif(strcmp($tipoUsuario, $tipoComprador) === 0){
-        $url= 'paginaPrincipalCompradores.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    } 
-    else{
-        $url= 'login.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    }         */
 ?>

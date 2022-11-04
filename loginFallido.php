@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,11 @@
     <title>Login</title>
 </head>
 <body>
+    <?php
+       $var = "La cuenta que acaba de ingresar no se encuentra registrada";
+       echo "<script> alert('".$var."'); </script>";
+    ?>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <div>
