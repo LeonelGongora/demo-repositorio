@@ -25,11 +25,9 @@ session_start();
    $descripcion = $_POST['Descripcion'];
    $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
 
-   $query = mysqli_query($conn,"UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual' and vendedores.contrasenia = '$passactual'");
+   $query = mysqli_query($conn,"UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual'");
    $resultado = $conn->query($query);
 
-   
 	$url= 'paginaPrincipalVendedores.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-   
 ?>
