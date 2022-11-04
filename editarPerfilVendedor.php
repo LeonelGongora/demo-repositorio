@@ -53,7 +53,7 @@ array_pop($resultado);
             <h2>Editar Perfil</h2>
         </div class="alert alert-danger" role="alert">
             <div class="row justify-content-center my-5" style="font-family:Arial;font-size: 16px">
-                <form action="guardarPerfilEditado.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
+                <form action="guardarPerfilVendedor.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
                     <div class="row justify-content-center my-1">
                       <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?>
                         <div class="col-lg-5">
