@@ -14,7 +14,7 @@
     $ema = $_SESSION['email1'];
     $pas = $_SESSION['pass1'];
 
-    $result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1");
+    $result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1");
 
     if(!$result){
        echo "ocurrio un error";
@@ -42,7 +42,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container-fluid">
-          <a class="navbar-brand" href="paginaPrincipalConPerfil.php">Imperfect Food</a>
+          <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
        </div>
     </nav>
 
@@ -121,7 +121,7 @@
         <div class="text-center">
             <div class="row justify-content-center my-5">
                 <div class="col-2">
-                    <a href="paginaPrincipalConPerfil.php" class="btn btn-danger rounded-0" role="button">Volver</a>
+                    <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Volver</a>
                 </div>
                 
                 <div class="col-2">

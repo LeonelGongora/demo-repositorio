@@ -1,10 +1,6 @@
 
 <?php
-	$Name = $_POST['NombreNegocio']; 
-    $password = $_POST['password'];
-    $email = $_POST['Email'];
-	$number = $_POST['Telefono'];
-    $ubicacion = $_POST['Ubicacion'];
+	
 
     //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -16,6 +12,16 @@ $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+    session_start();
+    $_SESSION['email1'] = $_POST['Email'];
+    $_SESSION['pass1'] = $_POST['password'];
+
+	$Name = $_POST['NombreNegocio']; 
+    $password = $_POST['password'];
+    $email = $_POST['Email'];
+	$number = $_POST['Telefono'];
+    $ubicacion = $_POST['Ubicacion'];
 
 	// Database connection
 	if($conn->connect_error){
@@ -29,8 +35,9 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		//echo "Registration successfully...";
 		$stmt->close();
 		$conn->close();
+		$url= '../paginaPrincipalCompradores.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 	}
 
-    $url= 'paginaPrincipalCompradores.php';
-      echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+    
 ?>

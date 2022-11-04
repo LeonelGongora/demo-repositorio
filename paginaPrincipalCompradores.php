@@ -29,7 +29,7 @@
                       Mi perfil
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="">Editar Perfil</a></li>
+                    <li><a class="dropdown-item" href="editarPerfilComprador.php">Editar Perfil</a></li>
                     <li><a class="dropdown-item" href="index.php">Cerrar Sesion</a></li>
                   </ul>
                 </li>

@@ -24,7 +24,7 @@ $query_builder = TRUE;
     $resultado = $conn->query($query);
 
     if($resultado){
-	   $url= 'paginaPrincipalVendedores.php';
+	   $url= '../paginaPrincipalVendedores.php';
        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
 	   echo "La imagen no pudo insertarse";
@@ -45,8 +45,5 @@ $query_builder = TRUE;
 		$conn->close();
 	}
 	*/
-
-    $url= 'index.php';
-    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>
 
