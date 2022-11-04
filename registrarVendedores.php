@@ -12,6 +12,10 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+    session_start();
+    $_SESSION['email1'] = $_POST['Email'];
+    $_SESSION['pass1'] = $_POST['password'];
+
    $Name = $_POST['NombreNegocio']; 
    $password = $_POST['password'];
    $email = $_POST['Email'];
