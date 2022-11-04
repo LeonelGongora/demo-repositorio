@@ -18,13 +18,21 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
    $descripcion = $_POST['Descripcion'];
-   //$fileName = basename($_FILES["ImagenVendedor"]["name"]); 
-   //$fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+   $imagen = addslashes(file_get_contents($_FILES(['ImagenVendedor']['tmp_name'])));
 
-   $image = $_FILES['ImagenVendedor']['tmp_name']; 
-   $imagen = addslashes(file_get_contents($image)); 
-   
+
+   $query = "INSERT INTO vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
+   $resultado = $conn->query($query);
+
+   if($resultado){
+	$url= 'paginaPrincipalVendedores.php';
+    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+   }else{
+	echo "No se inserto";
+   }
 	// Database connection
+	
+	/*
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
@@ -39,6 +47,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		$conn->close();
 	}
 
-    $url= 'paginaPrincipalVendedores.php';
-    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+
+    */
+
+    
 ?>
