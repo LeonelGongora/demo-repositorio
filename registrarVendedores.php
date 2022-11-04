@@ -27,7 +27,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 	$url= 'paginaPrincipalVendedores.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
    }else{
-	echo "No se inserto";
+	echo "La imagen no pudo insertarse";
    }
 	// Database connection
 	
@@ -45,7 +45,5 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		$stmt->close();
 		$conn->close();
 	}
-
-
     */
 ?>

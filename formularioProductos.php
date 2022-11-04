@@ -65,7 +65,7 @@
             
                         </div>
 
-                        <!--
+                        
 
                         <div class="col-lg-4 align-self-center">
                           <style>
@@ -80,7 +80,7 @@
                               Textosasasa
                             </div>
                           <div class="row">
-                            <input type="file" name="Imagen" id="Imagen" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
+                            <input type="file" name="ImagenProducto" id="ImagenProducto" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
                           <div class="invalid-feedback">Necesita ingresar una imagen</div>
                           </div>
                           
@@ -94,7 +94,7 @@
                             };
                           </script>
                         </div>
-                        -->
+                        
                         
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
