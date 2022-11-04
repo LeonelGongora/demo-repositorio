@@ -86,7 +86,6 @@
                           </div>
                         </div>
                         
-                        
                           <style>
                             #output { 
                            position:relative; 
@@ -131,7 +130,6 @@
                                   <button type="submit" class="btn btn-success rounded-0">Registrar</button>
                               </div>
                         </div>
-                      
                     </div>
                 </form>
             </div>
