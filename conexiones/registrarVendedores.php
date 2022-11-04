@@ -28,7 +28,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    $resultado = $conn->query($query);
 
    if($resultado){
-	$url= 'paginaPrincipalVendedores.php';
+	$url= '../paginaPrincipalVendedores.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
    }else{
 	echo "La imagen no pudo insertarse";
