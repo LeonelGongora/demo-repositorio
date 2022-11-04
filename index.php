@@ -84,7 +84,7 @@ array_pop($resultado);
                           <img src=""  width="180" height="180">
                           
                             <div class="text-center">
-                               <h4> <?php echo $row['NombreDeProducto'];?> </h4>
+                               <h5> <?php echo $row['NombreDeProducto'];?> </h5>
                             </div>
                           
                         </div>
@@ -97,8 +97,8 @@ array_pop($resultado);
                               Oferta: <?php echo $row['precioDeOferta'];?> Bs.
                           </div>
                         </div >
-                          <h6 class="card-text">Precio Normal: <del><?php echo $row['Precio'];?></del> Bs.</h6>
-                          <h6 class="card-text">Stock: <?php echo $row['Stock'];?></h6>
+                          <h6 class="card-text">Precio Normal: <p><del><?php echo $row['Precio'];?> Bs.</p></del> </h6>
+                          <h6 class="card-text">Stock: <p><?php echo $row['Stock'];?></p></h6>
                           <p> <?php echo $row['Descripcion'];?> </p>
                       </div>
                     </div>
