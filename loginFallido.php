@@ -16,11 +16,6 @@
     <title>Login</title>
 </head>
 <body>
-    <?php
-       $var = "La cuenta que acaba de ingresar no se encuentra registrada";
-       echo "<script> alert('".$var."'); </script>";
-    ?>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <div>
@@ -97,8 +92,12 @@
                                 </div>
                             </div>
                           </div>
+                          <br>
+
+                          <div class="alert alert-danger">Usuario no encontrado.</div>
+
+                          <br>
                         
-                            
                         <div class="d-flex justify-content-between">
                             <div>
                                 <button type="submit" class="btn btn-success rounded-0">Registrar</button>
@@ -112,7 +111,7 @@
                         </div>
 
                       </form>
-                      <div class="alert alert-danger">Usuario no encontrado.</div>
+                      
                     </div>
                   </div>
                 </div>
