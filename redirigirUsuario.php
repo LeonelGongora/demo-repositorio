@@ -23,12 +23,15 @@
     
 
     if (mysqli_num_rows($consultaVendedores) > 0){
-        echo "Usted ingreso como vendedor";
+        $url = 'paginaPrincipalVendedores.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 
     }else if(mysqli_num_rows($consultaCompradores) > 0){
-        echo "Usted ingreso como comprador";
+        $url= 'paginaPrincipalCompradores.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
-        echo "El usuario que intenta ingresar no existe";
+        $url= 'login.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     } 
 
     /* $tipoVendedor = "V";
