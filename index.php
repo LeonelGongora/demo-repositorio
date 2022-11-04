@@ -18,7 +18,7 @@ if(!$conn){
   exit;
 }
 
-$result = mysqli_query($conn,"SELECT NombreDeProducto,Precio,precioDeOferta,Stock,Descripcion FROM productos ");
+$result = mysqli_query($conn,"SELECT NombreDeProducto,Precio,PrecioDeOferta,Stock,Descripcion, ImagenProducto FROM productos ");
 if(!$result){
   echo "ocurrio un error";
   exit;
@@ -81,7 +81,7 @@ array_pop($resultado);
                     <div class="col">
                       <div class="card mb-1 border-0" >
                         <div class="card-body text-center" >
-                          <img src=""  width="180" height="180"> 
+                          <img src="data:image/jpg;base64,<?php echo base64_encode($row['ImagenProducto']);?>"  width="180" height="180"> 
                           
                             <div class="text-center">
                                <h5> <?php echo $row['NombreDeProducto'];?> </h5>
