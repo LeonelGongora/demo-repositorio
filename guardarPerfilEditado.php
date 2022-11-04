@@ -28,10 +28,8 @@ session_start();
    $query = mysqli_query($conn,"UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual' and vendedores.contrasenia = '$passactual'");
    $resultado = $conn->query($query);
 
-   if($resultado){
+   
 	$url= 'index.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-   }else{
-	echo "La imagen no pudo insertarse";
-   }
+   
 ?>
