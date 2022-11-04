@@ -28,6 +28,6 @@ session_start();
    $query = mysqli_query($conn,"UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual'");
    $resultado = $conn->query($query);
 
-	$url= 'paginaPrincipalVendedores.php';
+   header('refresh:0;url=index.php');
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>
