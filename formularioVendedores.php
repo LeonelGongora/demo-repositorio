@@ -85,9 +85,9 @@
                              <input type="text" name="Descripcion" id="Descripcion" class = "form-control" pattern =  "^[A-Z|a-z|0-9|.|,|\s]{30,300}$"> 
                           </div>
                         </div>
-
                         
-                            <div class="col-lg-4 align-self-center">
+                        <!--
+                          <div class="col-lg-4 align-self-center">
                           <style>
                             #output { 
                            position:relative; 
@@ -114,11 +114,10 @@
                             };
                           </script>
                         </div>
-
-
-                        
+                        -->
 
                         
+      
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
                                   <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
