@@ -86,28 +86,26 @@
                           </div>
                         </div>
                         
-                        <!--
+                        
                           <style>
                             #output { 
                            position:relative; 
                            left:70px; 
                           } 
                           </style>
-                          -->
-                        <div class="col-lg-4 align-self-center">
                           
-                              <!--
-                                <img  id="output" top= ""width="200px" height="200px"/>
+                        <div class="col-lg-4 align-self-center">
+    
+                              <img  id="output" top= ""width="200px" height="200px"/>
                              <div style="opacity: 0;">
                                 Textosasasa
                              </div>
-                                -->
-                             
-                             
+                                
+                          
                                <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" onchange="loadFile(event)"  required>
                                <div class="invalid-feedback">Necesita ingresar una imagen</div>
                              
-                          <!--
+                          
                             <script>
                             var loadFile = function(event) {
                               var output = document.getElementById('output');
@@ -116,8 +114,8 @@
                                 URL.revokeObjectURL(output.src) 
                               }
                             };
-                          </script>
-                          -->
+                            </script>
+                          
                           
                         </div>
                         
