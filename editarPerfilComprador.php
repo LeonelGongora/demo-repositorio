@@ -63,7 +63,7 @@ array_pop($resultado);
           </div class="alert alert-danger" role="alert">
           
           <div class="row justify-content-center my-1">
-            <form action="conexiones/registrarCompradores.php" method="post" enctype="multipart/form-data" class="needs-validation"
+            <form action="conexiones/guardarPerfilComprador.php" method="post" enctype="multipart/form-data" class="needs-validation"
               novalidate>
               <div class="row justify-content-center my-1">
               <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?>
@@ -78,7 +78,7 @@ array_pop($resultado);
                     </div>
       
                   </div>
-                  
+
                   <div class="row">
                     <div class="col">
                       <label for="password" class="form-label">Contraseña:</label>
