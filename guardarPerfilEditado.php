@@ -29,7 +29,7 @@ session_start();
    $resultado = $conn->query($query);
 
    
-	$url= 'index.php';
+	$url= 'paginaPrincipalVendedores.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
    
 ?>
