@@ -110,7 +110,9 @@
                                 <a href="index.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                             </div>
                         </div>
+
                       </form>
+                      <div class="alert alert-danger">Usuario no encontrado.</div>
                     </div>
                   </div>
                 </div>
