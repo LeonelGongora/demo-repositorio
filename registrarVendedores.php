@@ -23,8 +23,10 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion) values(?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssiss", $Name, $password , $email, $number, $ubicacion, $descripcion);
+		$Imagen = addslashes(file_get_contents($_FILES(['ImagenVendedor']['tmp_name'])));
+
+		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, Imagen) values(?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssissb", $Name, $password , $email, $number, $ubicacion, $descripcion, $Imagen);
 		$execval = $stmt->execute();
 		//echo $execval;
 		//echo "Registration successfully...";

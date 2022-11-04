@@ -73,7 +73,6 @@
                               </div>
                           </div>
                         
-                          
                             <div class="form-outline mb-4">
                               <label for="password" class="form-label">Contraseña:</label>
                               <input name="password" type="password" value="" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|\s|#|,|.|;|+|/]{6,14}$" required />
