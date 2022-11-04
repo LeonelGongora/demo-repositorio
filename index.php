@@ -94,7 +94,7 @@ array_pop($resultado);
                       <div class="card-body">
                         <div class="card mb-4 border-0 text-white bg-danger text-center rounded" >
                           <div class="card-body "> 
-                              Oferta: <?php echo $row['precioDeOferta'];?> Bs.
+                              Oferta: <?php echo $row['PrecioDeOferta'];?> Bs.
                           </div>
                         </div >
                           <h6 class="card-text">Precio Normal: <del><?php echo $row['Precio'];?></del> Bs.</h6>

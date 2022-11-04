@@ -17,8 +17,8 @@
     $emailactual = $_SESSION['email1'];
     $passactual = $_SESSION['pass1'];
 
-    $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.password = '$passactual' LIMIT 1");
-    $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.password = '$passactual' LIMIT 1");
+    $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
+    $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
 
     
 

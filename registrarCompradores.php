@@ -22,7 +22,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into compradores(NombreNegocio, password,  Email, Telefono, Ubicacion) values(?, ?, ?, ?, ?)");
+		$stmt = $conn->prepare("insert into compradores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion) values(?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssis", $Name, $password , $email, $number, $ubicacion);
 		$execval = $stmt->execute();
 		//echo $execval;
