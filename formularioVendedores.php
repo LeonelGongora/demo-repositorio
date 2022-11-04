@@ -26,7 +26,7 @@
             <h2>Registro de Vendedores</h2>
         </div class="alert alert-danger" role="alert">
             <div class="row justify-content-center my-5" style="font-family:Arial;font-size: 16px">
-                <form action="registrarVendedores.php" method="POST" enctype = "multipart/form-data" class="needs-validation" novalidate>
+                <form action="registrarVendedores.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
                     <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color:white;">
                         <div class="col-lg-5">
                             
@@ -86,25 +86,29 @@
                           </div>
                         </div>
                         
-                        
-                          <div class="col-lg-4 align-self-center">
+                        <!--
                           <style>
                             #output { 
                            position:relative; 
                            left:70px; 
                           } 
                           </style>
+                          -->
+                        <div class="col-lg-4 align-self-center">
                           
-                          <img  id="output" top= ""width="200px" height="200px"/>
-                            <div style="opacity: 0;">
-                              Textosasasa
-                            </div>
-                          <div class="row">
-                            <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
-                          <div class="invalid-feedback">Necesita ingresar una imagen</div>
-                          </div>
-                          
-                          <script>
+                              <!--
+                                <img  id="output" top= ""width="200px" height="200px"/>
+                             <div style="opacity: 0;">
+                                Textosasasa
+                             </div>
+                                -->
+                             
+                             
+                               <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
+                               <div class="invalid-feedback">Necesita ingresar una imagen</div>
+                             
+                          <!--
+                            <script>
                             var loadFile = function(event) {
                               var output = document.getElementById('output');
                               output.src = URL.createObjectURL(event.target.files[0]);
@@ -113,11 +117,11 @@
                               }
                             };
                           </script>
+                          -->
+                          
                         </div>
                         
 
-                        
-      
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
                                   <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
