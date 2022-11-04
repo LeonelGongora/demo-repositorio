@@ -10,7 +10,7 @@
     crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-    <link rel="stylesheet" href="CSS/fondoLogin.css">
+    <link rel="stylesheet" href="css/estiloLogin.css">
     <title>Login</title>
 </head>
 <body>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="row g-0">
                   <div class="col-md-6 col-lg-5 d-none d-md-block">
-                    <img src="./imagenes/logo.PNG" style="margin-left: 20%; margin-top: 10%;" height="200px" width="200px">
+                    <img src="imagenes/logo-Imperfect Food.jpeg" style="margin-left: 20%; margin-top: 10%;" height="200px" width="200px">
                   </div>
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
@@ -74,7 +74,7 @@
                           </div>
 
                           <div class="row">
-                            <div class="col-lg-10">
+                            <div class="col-lg-8">
                                 <label for="password" class="form-label">Contraseña:</label>
                                  <input name="password" type="password" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
                                  <div class="invalid-feedback">
@@ -100,7 +100,7 @@
                                 Textosasasa
                             </div>
                             <div >
-                                <a href="sinRegistrarPaginaPrincipal.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                <a href="index.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                             </div>
                         </div>
                       </form>

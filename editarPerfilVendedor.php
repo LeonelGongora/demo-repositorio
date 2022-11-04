@@ -36,6 +36,7 @@ array_pop($resultado);
     crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/estiloFormularioVendedores.css">
     <title>Imperfect Food</title>
     
 
@@ -43,7 +44,7 @@ array_pop($resultado);
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
-          <a class="navbar-brand" href="paginaPrincipal.php">Imperfect Food</a>
+          <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
        </div>
     </nav>
 

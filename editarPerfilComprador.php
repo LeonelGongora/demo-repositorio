@@ -36,7 +36,7 @@ array_pop($resultado);
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/estiloFormularioVendedores.css">
+  <link rel="stylesheet" href="css/estiloFormularioCompradores.css">
   <title>Imperfect Food</title>
 </head>
 <body>
