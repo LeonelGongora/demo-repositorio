@@ -18,7 +18,7 @@
         <div class="container-fluid">
           <div>
             <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
-            <a class="navbar-brand" href="paginaPrincipal.php">
+            <a class="navbar-brand" href="index.php">
               Imperfect Food
            </a>
           </div>
