@@ -86,7 +86,7 @@
                           </div>
                         </div>
                         
-                        <!--
+                        
                           <div class="col-lg-4 align-self-center">
                           <style>
                             #output { 
@@ -114,7 +114,7 @@
                             };
                           </script>
                         </div>
-                        -->
+                        
 
                         
       

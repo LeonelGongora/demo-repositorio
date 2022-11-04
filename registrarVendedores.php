@@ -21,8 +21,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    //$fileName = basename($_FILES["ImagenVendedor"]["name"]); 
    //$fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
 
-   //$image = $_FILES['ImagenVendedor']['tmp_name']; 
-   //$imgContent = addslashes(file_get_contents($image)); 
+   $image = $_FILES['ImagenVendedor']['tmp_name']; 
+   $imagen = addslashes(file_get_contents($image)); 
    
 	// Database connection
 	if($conn->connect_error){
@@ -30,8 +30,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 
-		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion) values(?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssiss", $Name, $password , $email, $number, $ubicacion, $descripcion);
+		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) values(?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssissb", $Name, $password , $email, $number, $ubicacion, $descripcion, $imagen);
 		$execval = $stmt->execute();
 		//echo $execval;
 		//echo "Registration successfully...";
