@@ -18,11 +18,11 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
    $descripcion = $_POST['Descripcion'];
-   $fileName = basename($_FILES["ImagenVendedor"]["name"]); 
-   $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+   //$fileName = basename($_FILES["ImagenVendedor"]["name"]); 
+   //$fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
 
-   $image = $_FILES['ImagenVendedor']['tmp_name']; 
-   $imgContent = addslashes(file_get_contents($image)); 
+   //$image = $_FILES['ImagenVendedor']['tmp_name']; 
+   //$imgContent = addslashes(file_get_contents($image)); 
    
 	// Database connection
 	if($conn->connect_error){
@@ -30,7 +30,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 
-		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, Imagen) values(?, ?, ?, ?, ?, ?)");
+		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion) values(?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssiss", $Name, $password , $email, $number, $ubicacion, $descripcion);
 		$execval = $stmt->execute();
 		//echo $execval;

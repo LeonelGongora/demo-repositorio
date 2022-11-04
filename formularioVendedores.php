@@ -85,8 +85,8 @@
                              <input type="text" name="Descripcion" id="Descripcion" class = "form-control" pattern =  "^[A-Z|a-z|0-9|.|,|\s]{30,300}$"> 
                           </div>
                         </div>
-
                         
+                        <!--
                           <div class="col-lg-4 align-self-center">
                           <style>
                             #output { 
@@ -114,7 +114,7 @@
                             };
                           </script>
                         </div>
-                        
+                        -->
 
                         
       
