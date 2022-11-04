@@ -1,11 +1,5 @@
 <?php
-	$Name = $_POST['NombreNegocio']; 
-    $password = $_POST['password'];
-    $email = $_POST['Email'];
-	$number = $_POST['Telefono'];
-    $ubicacion = $_POST['Ubicacion'];
-    $descripcion = $_POST['Descripcion'];
-    
+	
 
     //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -18,15 +12,26 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+   $Name = $_POST['NombreNegocio']; 
+   $password = $_POST['password'];
+   $email = $_POST['Email'];
+   $number = $_POST['Telefono'];
+   $ubicacion = $_POST['Ubicacion'];
+   $descripcion = $_POST['Descripcion'];
+   $fileName = basename($_FILES["ImagenVendedor"]["name"]); 
+   $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+
+   $image = $_FILES['ImagenVendedor']['tmp_name']; 
+   $imgContent = addslashes(file_get_contents($image)); 
+   
 	// Database connection
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$Imagen = addslashes(file_get_contents($_FILES(['ImagenVendedor']['tmp_name'])));
 
-		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, Imagen) values(?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssissb", $Name, $password , $email, $number, $ubicacion, $descripcion, $Imagen);
+		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, Imagen) values(?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssiss", $Name, $password , $email, $number, $ubicacion, $descripcion);
 		$execval = $stmt->execute();
 		//echo $execval;
 		//echo "Registration successfully...";
