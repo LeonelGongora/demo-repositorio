@@ -7,8 +7,8 @@
     $emailactual = $_SESSION['email1'];
     $passactual = $_SESSION['pass1'];
 
-    $consultaVendedores = mysqli_query($conexion,"select * from vendedores where Email = '$emailactual' and password = '$passactual' limit 1");
-    $consultaCompradores = mysqli_query($conexion,"select * from compradores where Email = '$emailactual' and password = '$passactual' limit 1");
+    $consultaVendedores = mysqli_query($conexion,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.password = '$passactual' LIMIT 1");
+    $consultaCompradores = mysqli_query($conexion,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.password = '$passactual' LIMIT 1");
 
     
 
@@ -38,6 +38,4 @@
         $url= 'login.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }         */
-
-    
 ?>
