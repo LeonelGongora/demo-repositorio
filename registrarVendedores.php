@@ -21,7 +21,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    $imagen = addslashes(file_get_contents($_FILES(['ImagenVendedor']['tmp_name'])));
 
 
-   $query = "INSERT INTO vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
+   $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
    $resultado = $conn->query($query);
 
    if($resultado){
