@@ -23,11 +23,11 @@
     
 
     if (mysqli_num_rows($consultaVendedores) > 0){
-        $url = 'paginaPrincipalVendedores.php';
+        $url = '../paginaPrincipalVendedores.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 
     }else if(mysqli_num_rows($consultaCompradores) > 0){
-        $url= 'paginaPrincipalCompradores.php';
+        $url= '../paginaPrincipalCompradores.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
         $url= 'login.php';
