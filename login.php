@@ -63,7 +63,7 @@
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
       
-                      <form action="redirigirUsuario.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
+                      <form action="conexiones/redirigirUsuario.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
                         
                           <div class="form-outlin.e mb-4">
                             <label for="Email" class="form-label">Email: </label>
