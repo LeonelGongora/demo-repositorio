@@ -102,7 +102,7 @@
                              </div>
                                 
                           
-                               <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" onchange="loadFile(event)"  required>
+                               <input type="file" name="ImagenVendedor" id="ImagenVendedor" accept="image/png, image/jpeg" class = "form-control" onchange="loadFile(event)"  required>
                                <div class="invalid-feedback">Necesita ingresar una imagen</div>
                              
                           
