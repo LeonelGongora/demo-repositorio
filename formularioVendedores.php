@@ -64,7 +64,7 @@
                           </div>
                           
                           <div class="col">
-                              <label for="Telefono" class="form-label">Telefono: </label>
+                              <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
                              <div class="invalid-feedback">
                                 El telefono debe tener 8 digitos y comenzar con el 6 o el 7
@@ -104,7 +104,6 @@
                                <input type="file" name="ImagenVendedor" id="ImagenVendedor" accept="image/png, image/jpeg" class = "form-control" onchange="loadFile(event)"  required>
                                <div class="invalid-feedback">Necesita ingresar una imagen</div>
                              
-                          
                             <script>
                             var loadFile = function(event) {
                               var output = document.getElementById('output');

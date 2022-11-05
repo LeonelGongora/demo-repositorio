@@ -57,8 +57,8 @@
             <div class="col-lg-4">
               <div class="card mb-4 border-0" >
                 <div class="card-body text-center" >
-                  <img src="data:image/jpg;base64,<?php echo base64_encode($row['ImagenVendedor']);?>" width="200" height="200" alt="avatar"
-                    class="rounded-0" style="width: 150px;">
+                  <img src="data:image/jpg;base64,<?php echo base64_encode($row['ImagenVendedor']);?>" width="250" height="250" alt="avatar"
+                    class="rounded-0" >
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@
                 </div>
                 
                 <div class="col-2">
-                    <a href="editarPerfilVendedor.php" class="btn btn-success" role="button">Editar Perfil</a>
+                    <a href="editarPerfilVendedor.php" class="btn btn-success rounded-0" role="button">Editar Perfil</a>
                 </div>
                 
                 <div class="col-2">

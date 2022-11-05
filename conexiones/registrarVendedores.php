@@ -1,16 +1,14 @@
 <?php
-	
-
     //Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+   $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+   $cleardb_server = $cleardb_url["host"];
+   $cleardb_username = $cleardb_url["user"];
+   $cleardb_password = $cleardb_url["pass"];
+   $cleardb_db = substr($cleardb_url["path"],1);
+   $active_group = 'default';
+   $query_builder = TRUE;
+   // Connect to DB
+   $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
    session_start();
    $_SESSION['email1'] = $_POST['Email'];
@@ -33,21 +31,4 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
    }else{
 	echo "La imagen no pudo insertarse";
    }
-	// Database connection
-	
-	/*
-	if($conn->connect_error){
-		echo "$conn->connect_error";
-		die("Connection Failed : ". $conn->connect_error);
-	} else {
-
-		$stmt = $conn->prepare("insert into vendedores(NombreNegocio, password,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) values(?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssissb", $Name, $password , $email, $number, $ubicacion, $descripcion, $imagen);
-		$execval = $stmt->execute();
-		//echo $execval;
-		//echo "Registration successfully...";
-		$stmt->close();
-		$conn->close();
-	}
-    */
 ?>

@@ -51,12 +51,12 @@
               <div class="card" style="border :none">
                 <div class = "row justify-content-center my-2">
                     <div class="text-center">
-                        <h2 style="font-family:verdana;font-size: 26px">Iniciar Sesion</h2>
+                        <h2 style="font-family:verdana;font-size: 26px">Iniciar Sesión</h2>
                     </div>
                     <div style="opacity: 0;">
                         Textosasasa
                     </div>
-                    
+
                 </div>
                 <div class="row g-0">
                   <div class="col-md-6 col-lg-5 d-none d-md-block">
@@ -100,12 +100,12 @@
                         
                         <div class="d-flex justify-content-between">
                             <div>
-                                <button type="submit" class="btn btn-success rounded-0">Registrar</button>
+                                <button type="submit" class="btn btn-success rounded-0">Ingresar</button>
                             </div>
                             <div style="opacity: 0;">
                                 Textosasasa
                             </div>
-                            <div >
+                            <div>
                                 <a href="index.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                             </div>
                         </div>

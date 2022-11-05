@@ -87,7 +87,7 @@ array_pop($resultado);
                           </div>
                           
                           <div class="col">
-                              <label for="Telefono" class="form-label">Telefono: </label>
+                              <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
                              <div class="invalid-feedback">
                                 El telefono debe tener 8 digitos y comenzar con el 6 o el 7
@@ -126,7 +126,7 @@ array_pop($resultado);
                               Textosasasa
                             </div>
                           <div class="row">
-                            <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
+                            <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)">
                           <div class="invalid-feedback">Necesita ingresar una imagen</div>
                           </div>
                           

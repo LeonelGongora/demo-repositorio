@@ -94,7 +94,7 @@
                             
                         <div class="d-flex justify-content-between">
                             <div>
-                                <button type="submit" class="btn btn-success rounded-0">Registrar</button>
+                                <button type="submit" class="btn btn-success rounded-0">Ingresar</button>
                             </div>
                             <div style="opacity: 0;">
                                 Textosasasa
