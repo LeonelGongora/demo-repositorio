@@ -15,9 +15,7 @@
     
 </head>
 <body>
-    <?php  
-       echo '<script>alert("El email que ingreso no esta disponible")</script>';
-    ?>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        
 
