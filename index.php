@@ -55,6 +55,8 @@ array_pop($resultado);
            <span class="navbar-toggler-icon"></span>
          </button>
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Registrarse
@@ -64,8 +66,8 @@ array_pop($resultado);
                     <li><a class="dropdown-item" href="formularioCompradores.php">Comprador</a></li>
                   </ul>
                 </li>
+              </ul>
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                
                 <a class="nav-link" href="login.php">
                   Iniciar Sesión
                 </a>
