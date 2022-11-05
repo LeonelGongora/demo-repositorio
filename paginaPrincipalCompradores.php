@@ -55,7 +55,7 @@ array_pop($resultado);
          </button>
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-             <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Mi perfil
                   </a>
@@ -64,6 +64,9 @@ array_pop($resultado);
                     <li><a class="dropdown-item" href="index.php">Cerrar Sesion</a></li>
                   </ul>
                 </li>
+                <div style="opacity: 0;">
+                      Td
+                </div>
               </ul>
             </div>
         </div>
