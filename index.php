@@ -71,9 +71,6 @@ array_pop($resultado);
                 <a class="nav-link" href="login.php">
                   Iniciar Sesión
                 </a>
-                <div style="opacity: 0;">
-                      Tdfgt
-                </div>
               </ul>
             </div>
         </div>
