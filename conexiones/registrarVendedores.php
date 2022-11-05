@@ -10,25 +10,38 @@
    // Connect to DB
    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-   session_start();
-   $_SESSION['email1'] = $_POST['Email'];
-   $_SESSION['pass1'] = $_POST['password'];
+   $emailactual = $_POST['Email'];
 
-   $Name = $_POST['NombreNegocio']; 
-   $password = $_POST['password'];
-   $email = $_POST['Email'];
-   $number = $_POST['Telefono'];
-   $ubicacion = $_POST['Ubicacion'];
-   $descripcion = $_POST['Descripcion'];
-   $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
+    $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual'  LIMIT 1");
+    $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' LIMIT 1");
 
-   $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
-   $resultado = $conn->query($query);
+    if (mysqli_num_rows($consultaVendedores) > 0){
+        $url = '../formularioVendedoresFallido.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+    }else if(mysqli_num_rows($consultaCompradores) > 0){
+        $url= '../formularioVendedoresFallido.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+    }else{
+        session_start();
+       $_SESSION['email1'] = $_POST['Email'];
+       $_SESSION['pass1'] = $_POST['password'];
 
-   if($resultado){
-	$url= '../paginaPrincipalVendedores.php';
-    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-   }else{
-	echo "La imagen no pudo insertarse";
-   }
+       $Name = $_POST['NombreNegocio']; 
+       $password = $_POST['password'];
+       $email = $_POST['Email'];
+       $number = $_POST['Telefono'];
+       $ubicacion = $_POST['Ubicacion'];
+       $descripcion = $_POST['Descripcion'];
+       $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
+
+       $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
+       $resultado = $conn->query($query);
+
+       if($resultado){
+	     $url= '../paginaPrincipalVendedores.php';
+         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+       }else{
+	      echo "La imagen no pudo insertarse";
+       }
+    } 
 ?>
