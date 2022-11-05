@@ -13,7 +13,7 @@
   <title>Imperfect Food</title>
 </head>
 <body>
-    
+
     <?php  
        echo '<script>alert("El email que ingreso no esta disponible")</script>';
     ?>
@@ -35,7 +35,7 @@
     <div class = "container">
     
           <div class="row justify-content-center my-2">
-            <form action="conexiones/registrarCompradoresAux.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <form action="conexiones/registrarCompradores.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="row justify-content-center my-1">
                 <div class="col-lg-5" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
                   <div class="text-center">
@@ -52,7 +52,6 @@
       
                   </div>
       
-      
                   <div class="col">
                     <label for="Email" class="form-label">Email: </label>
                     <input type="text" name="Email" id="Email" class="form-control" pattern="^[^ ]+@[^ ]+\.[a-z]{2,3}$"
@@ -61,7 +60,6 @@
                       Ingrese un email valido
                     </div>
                   </div>
-      
       
                   <div class="row">
                     <div class="col">

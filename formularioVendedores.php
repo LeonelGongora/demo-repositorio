@@ -18,7 +18,6 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        
-
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
           <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
 

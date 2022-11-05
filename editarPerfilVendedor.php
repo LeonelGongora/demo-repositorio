@@ -149,7 +149,7 @@ array_pop($resultado);
                     
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
-                                  <a href="paginaPrincipalConPerfil.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                  <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                               </div>
                               <div style="opacity: 0;">
                                 Textosasasa
