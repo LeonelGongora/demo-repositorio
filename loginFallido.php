@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <div>
-            <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
+            <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
             <a class="navbar-brand" href="index.php">
               Imperfect Food
            </a>

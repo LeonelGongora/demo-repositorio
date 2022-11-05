@@ -17,13 +17,18 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
+
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
+
           <a class="navbar-brand" href="index.php">Imperfect Food</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <p style="opacity: 0;">Para rellenar</p>
           </div>
+          
        </div>
     </nav>
+
+
   <section class="fondoVendedores">
     <div class = "container">
         <div class="text-center" style="font-family:Arial;font-size: 18px">

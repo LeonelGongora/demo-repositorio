@@ -14,17 +14,15 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <div>
-        <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
-        <a class="navbar-brand" href="index.php">
-          Imperfect Food
-        </a>
-      </div>
-      
+      <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
+
+    <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
+
+      <a class="navbar-brand" href="index.php">Imperfect Food</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <p style="opacity: 0;">Para rellenar</p>
+        <p style="opacity: 0;">Para rellenar</p>
       </div>
+
     </div>
   </nav>
   

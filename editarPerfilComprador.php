@@ -41,19 +41,16 @@ array_pop($resultado);
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
      <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
-      <div>
-        <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
-        <a class="navbar-brand" href="paginaPrincipalCompradores.php">
-          Imperfect Food
-        </a>
-      </div>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <p style="opacity: 0;">Para rellenar</p>
-      </div>
-    </div>
+
+     <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
+
+        <a class="navbar-brand" href="paginaPrincipalCompradores.php">Imperfect Food</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <p style="opacity: 0;">Para rellenar</p>
+        </div>
+   
+     </div>
   </nav>
   
   

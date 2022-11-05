@@ -48,6 +48,7 @@ array_pop($resultado);
 </head>
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
         <a class="navbar-brand" href="index.php">Imperfect Food</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
