@@ -42,6 +42,7 @@ array_pop($resultado);
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+     <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
       <div>
         <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
         <a class="navbar-brand" href="paginaPrincipalCompradores.php">

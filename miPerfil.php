@@ -42,6 +42,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container-fluid">
+          <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
           <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
        </div>
     </nav>
