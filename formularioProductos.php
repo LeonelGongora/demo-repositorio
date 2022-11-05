@@ -14,10 +14,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-       <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
-
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
 
+          <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
           <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <p style="opacity: 0;">Para rellenar</p>
@@ -26,14 +25,16 @@
         </div>
     </nav>
 
-    
+
     <div class = "container" >
-        <div class="text-center" style="font-family:Arial;font-size: 18px">
-            <h2>Registro de Producto</h2>
-        </div class="alert alert-danger" role="alert">
             <div class="row justify-content-center my-5" style="font-family:Arial;font-size: 16px">
                     <form action="conexiones/registrarProductos.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
+
                       <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
+                        <div class="text-center" style="font-family:Arial;font-size: 18px">
+                           <h2>Registro de Producto</h2>
+                        </div class="alert alert-danger" role="alert">
+                        
                         <div class="col-lg-5">
                             <div class="col">
                                <label for="NombreDeProducto" class="form-label">Nombre de Producto:</label>
