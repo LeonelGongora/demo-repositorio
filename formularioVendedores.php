@@ -16,9 +16,10 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-       <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
+       
 
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
+          <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
 
           <a class="navbar-brand" href="index.php">Imperfect Food</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,6 +40,7 @@
                         <div class="text-center" style="font-family:Arial;font-size: 18px">
                           <h2>Registro de Vendedores</h2>
                         </div class="alert alert-danger" role="alert">
+
                         <div class="col-lg-5">
                             
                           <div class="col">
