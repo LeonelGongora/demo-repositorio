@@ -61,11 +61,11 @@ array_pop($resultado);
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="miPerfil.php">Ver Perfil</a></li>
-                    <li><a class="dropdown-item" href="index.php">Cerrar Sesion</a></li>
+                    <li><a class="dropdown-item" href="index.php">Cerrar Sesión</a></li>
                   </ul>
                 </li>
                 <div style="opacity: 0;">
-                      Td
+                      Tdgtf
                 </div>
               </ul>
             </div>
