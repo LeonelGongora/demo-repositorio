@@ -29,6 +29,10 @@
        </div>
     </nav>
 
+<script>
+  var forms = document.querySelectorAll('.needs-validation')
+console.log(Array.prototype.slice.call(forms));
+</script>
 
   <section class="fondoVendedores">
     <div class = "container">
