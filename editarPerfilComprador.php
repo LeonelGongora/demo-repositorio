@@ -56,9 +56,6 @@ array_pop($resultado);
   
   <section class="fondoCompradores">  
     <div class = "container">
-          <div class="text-center">
-            <h2>Editar Perfil</h2>
-          </div class="alert alert-danger" role="alert">
           
           <div class="row justify-content-center my-1">
             <form action="conexiones/guardarPerfilComprador.php" method="post" enctype="multipart/form-data" class="needs-validation"
@@ -66,6 +63,9 @@ array_pop($resultado);
               <div class="row justify-content-center my-1">
               <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?>
                 <div class="col-lg-5" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
+                  <div class="text-center">
+                     <h2>Editar Perfil</h2>
+                  </div class="alert alert-danger" role="alert">
       
                   <div class="col">
                     <label for="NombreNegocio" class="form-label">Nombre:</label>
