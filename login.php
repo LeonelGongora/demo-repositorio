@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <div>
-            <img height="30px" alt="logo" src="imagenes/logo1.jpeg">
+            <img height="40px" alt="logo" src="imagenes/Logo-Barra.jpeg">
             <a class="navbar-brand" href="index.php">
               Imperfect Food
            </a>
@@ -49,7 +49,7 @@
               <div class="card" style="border :none">
                 <div class = "row justify-content-center my-2">
                     <div class="text-center">
-                        <h2 style="font-family:verdana;font-size: 26px">Iniciar Sesion</h2>
+                        <h2 style="font-family:verdana;font-size: 26px">Iniciar Sesión</h2>
                     </div>
                     <div style="opacity: 0;">
                         Textosasasa
