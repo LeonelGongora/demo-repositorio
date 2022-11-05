@@ -117,7 +117,7 @@ array_pop($resultado);
                   </div>
                   
                   <div class="col">
-                    <label for="Telefono" class="form-label">Telefono: </label>
+                    <label for="Telefono" class="form-label">Teléfono: </label>
                     <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono"  id="Telefono" class="form-control" pattern="[7|6][0-9]{7}$" required>
                     <div class="invalid-feedback">
                       El telefono debe tener 8 digitos y comenzar con el 6 o el 7
