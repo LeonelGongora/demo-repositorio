@@ -44,6 +44,9 @@
        <div class="container-fluid">
           <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
           <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <p style="opacity: 0;">Para rellenar</p>
+          </div>
        </div>
     </nav>
 

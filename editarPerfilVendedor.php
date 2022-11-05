@@ -52,14 +52,13 @@ array_pop($resultado);
        </div>
     </nav>
 
-
     <div class = "container">
         <div class="text-center" style="font-family:Arial;font-size: 18px">
             <h2>Editar Perfil</h2>
         </div class="alert alert-danger" role="alert">
             <div class="row justify-content-center my-5" style="font-family:Arial;font-size: 16px">
                 <form action="conexiones/guardarPerfilVendedor.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
-                    <div class="row justify-content-center my-1">
+                    <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color:white;">
                       <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?>
                         <div class="col-lg-5">
                         
