@@ -9,7 +9,7 @@
     rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
     crossorigin="anonymous">
-  <link rel="stylesheet" href="estiloVendedores.css">
+  <link rel="stylesheet" href="css/estiloVendedores.css">
   <title>Imperfect Food</title>
 </head>
 <body>
