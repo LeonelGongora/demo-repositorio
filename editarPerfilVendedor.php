@@ -43,26 +43,30 @@ array_pop($resultado);
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
           <a class="navbar-brand" href="paginaPrincipalVendedores.php">Imperfect Food</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <p style="opacity: 0;">Para rellenar</p>
+          </div>
        </div>
     </nav>
 
-
     <div class = "container">
-        <div class="text-center" style="font-family:Arial;font-size: 18px">
-            <h2>Editar Perfil</h2>
-        </div class="alert alert-danger" role="alert">
-            <div class="row justify-content-center my-5" style="font-family:Arial;font-size: 16px">
+        
+            <div class="row justify-content-center my-2" style="font-family:Arial;font-size: 16px">
                 <form action="conexiones/guardarPerfilVendedor.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
-                    <div class="row justify-content-center my-1">
+                    <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color:white;">
+                    <div class="text-center" style="font-family:Arial;font-size: 18px">
+                      <h2>Editar Perfil</h2>
+                    </div class="alert alert-danger" role="alert">
                       <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?>
                         <div class="col-lg-5">
                         
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
                                <input type="text" value= "<?php echo $row['NombreNegocio'];?>" name="NombreNegocio" id="NombreNegocio"class="form-control" pattern = "^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                             <div class="invalid-feedback">
+                             <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
                              </div>
                           </div>
@@ -71,7 +75,7 @@ array_pop($resultado);
                             <div class="col-lg-10">
                                 <label for="password" class="form-label">Contraseña:</label>
                                  <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
-                                 <div class="invalid-feedback">
+                                 <div id = "validacion2" class="invalid-feedback">
                                     La contrasea debe tener un minimo de 6 caracteres y maximo 14
                                   </div>
 
@@ -89,20 +93,18 @@ array_pop($resultado);
                           <div class="col">
                               <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
-                             <div class="invalid-feedback">
+                             <div id = "validacion3" class="invalid-feedback">
                                 El telefono debe tener 8 digitos y comenzar con el 6 o el 7
                              </div>
                           </div>
                         
-
                           <div class="col">
                             <label for="Ubicacion" class="form-label">Ubicación: </label>
                             <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control" placeholder="https://goo.gl/maps/........." pattern = "https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+|" required>
-                            <div class="invalid-feedback">
+                            <div id = "validacion4" class="invalid-feedback">
                               Ingrese una ubicacion valida
                             </div>
                           </div>
-                        
                         
                           <div class="col">
                              <label for="Descripcion" class="form-label">Descripción: </label>
@@ -141,11 +143,10 @@ array_pop($resultado);
                           </script>
 
                         </div>
-
-                    
+                        
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
-                                  <a href="paginaPrincipalConPerfil.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                  <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                               </div>
                               <div style="opacity: 0;">
                                 Textosasasa
@@ -160,7 +161,7 @@ array_pop($resultado);
                 </form>
             </div>
     </div>
-    <script src="javascript/validacion.js"></script>
+    <script src="javascript/validacionFormularioVendedoresEditar.js"></script>
     <script src="javascript/paraElOjo.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
