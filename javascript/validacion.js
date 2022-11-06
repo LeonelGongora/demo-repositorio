@@ -2,11 +2,12 @@
     'use strict'
 
     var forms = document.querySelectorAll('.needs-validation')
+    console.log(forms);
 
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          console.log(form)
+          console.log(form);
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
