@@ -6,7 +6,8 @@
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          if (form.childNodes.length == 0) {
+          console.log(form)
+          if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
           }
@@ -14,3 +15,4 @@
         }, false)
       })
   })()
+
