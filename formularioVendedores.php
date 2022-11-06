@@ -103,12 +103,12 @@ console.log(Array.prototype.slice.call(forms));
                           </div>
                         </div>
                         
-                          <style>
+                        <style>
                             #output { 
                            position:relative; 
                            left:70px; 
                           } 
-                          </style>
+                        </style>
                           
                         <div class="col-lg-4 align-self-center">
     
@@ -130,8 +130,6 @@ console.log(Array.prototype.slice.call(forms));
                               }
                             };
                             </script>
-                          
-                          
                         </div>
                         
 
