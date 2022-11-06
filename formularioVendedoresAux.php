@@ -50,6 +50,10 @@
                              <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
                              </div>
+                             <div class="was-validated">
+                               
+                             </div>
+                             
                           </div>
                           
                           <div class="col">
