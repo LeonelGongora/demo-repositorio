@@ -41,7 +41,7 @@ form.onsubmit = (e)=>{
   deInput.onkeyup = ()=>{checkDescription();}
   
   function checkName(){ 
-    let pattern = /^[A-Z|a-z|0-9]{3,20}$/; 
+    let pattern = /^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$/; 
     if(!nInput.value.match(pattern)){ 
       nField.classList.add("error");
       nField.classList.remove("valid");
