@@ -27,67 +27,68 @@
 
         <div class="row justify-content-center my-5">
             <div class="col-lg-7">
-                <form action="conexiones/registrarVendedores.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
+                <form action="conexiones/registrarVendedores.php" method="post" enctype = "multipart/form-data">
 
-                  <div class="col-md-8">
+                  <div class="col">
                     <div class="field name">
-                      <div class="input-area">
+
                         <label for="NombreNegocio" class="form-label">Nombre de Negocio: </label>
                         <input type="text" name="NombreNegocio" id="NombreNegocio"  class="form-control" >
-                      </div>
+                      
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
 
-                  <div class="col-md-8">
+                  <div class="col">
                     <div class="field email">
-                      <div class="input-area">
+                      
                         <label for="Email" class="form-label">Email: </label>
                         <input type="text" name="Email" id="Email" class="form-control" >
-                      </div>                   
+                                        
                        <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
 
-                  <div class="col-md-8">
+                  <div class="col">
                     <div class="field password">
-                      <div class="input-area">
+                      
                         <label for="Password" class="form-label">Contraseña: </label>
                         <input type="text" name="password" id="password" class="form-control" >
-                      </div>
+                      
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
 
                   
-                  <div class="col-md-8">
+                  <div class="col">
+                    <label for="Telefono" class="form-label">Telefono: </label>
+
                     <div class="field phone">
-                      <div class="input-area">
-                        <label for="Telefono" class="form-label">Telefono: </label>
+                      
                         <input type="text" name="Telefono" id="Telefono" class="form-control" >
-                      </div>
+                      
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
 
-                  <div class="col-md-8">
+                  <div class="col">
+                    <label for="Ubicacion" class="form-label">Ubicacion: </label>
                     <div class="field location">
-                      <div class="input-area">
-                        <label for="Ubicacion" class="form-label">Ubicacion: </label>
+                      
                         <input type="text" name="Ubicacion" id="Ubicacion" class="form-control" >
-                      </div>
+
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
 
-                  <div class="col-md-8">
+                  <div class="col">
+                  <label for="Descripcion" class="form-label">Descripcion: </label>
+
                     <div class="field description">
-                    <div class="input-area">
-                      <label for="Descripcion" class="form-label">Descripcion: </label>
                       <input type="text" name="Descripcion" id="Descripcion" class="form-control" >
+                    
+                      <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
-                    <div class="error error-txt">Este campo no puede estar vacio</div>
-                  </div>
                   </div>
 
                         <div class="col-lg-4 align-self-center">
@@ -119,9 +120,7 @@
                             </script>
                         </div>
 
-                    
                     <div class="d-flex justify-content-center flex-nowrap my-3">
-                        
                             <div>
                                 <a href="miPerfil.html" class="btn btn-danger" role="button">Cancelar</a>
                             </div>
@@ -132,14 +131,12 @@
                                 <button type="submit" class="btn btn-success">Registrar</button>
                             </div>
                     </div>
-
-
                 </form>
             </div>
         </div>
     </div>
   <script src="javascript/validacionVendedores.js"></script>
-  <script src="javascript/validacion.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
     crossorigin="anonymous"></script>

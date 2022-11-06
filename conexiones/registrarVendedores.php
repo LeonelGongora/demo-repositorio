@@ -10,6 +10,11 @@
    // Connect to DB
    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+   if ($conn -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    exit();
+   }
+
    $emailactual = $_POST['Email'];
 
     $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual'  LIMIT 1");
@@ -22,6 +27,7 @@
         $url= '../formularioVendedoresFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
+        
         session_start();
        $_SESSION['email1'] = $_POST['Email'];
        $_SESSION['pass1'] = $_POST['password'];

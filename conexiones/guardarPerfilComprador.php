@@ -24,6 +24,6 @@ session_start();
    $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion' WHERE compradores.Email = '$emailactual'";
    $resultado = $conn->query($query);
 
-	$url= '../index.php';
+	$url= '../paginaPrincipalCompradores.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>

@@ -145,7 +145,7 @@ array_pop($resultado);
                       Textosasasa
                     </div>
                     <div>
-                      <button type="submit" class="btn btn-success rounded-0">Registrar</button>
+                      <button type="submit" class="btn btn-success rounded-0">Guardar</button>
                     </div>
                   </div>
                 </div>
