@@ -22,8 +22,9 @@
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
           }else{
-            formulario[0].classList.add('was-validated')
+            form.classList.add('was-validated')
           }
+
         }, false)
       })
   })()
