@@ -54,7 +54,7 @@
                           
                           <div class="col">
                               <label for="Email" class="form-label">Email: </label>
-                             <input type="text" name="Email" id="Email" class="form-control" placeholder="example@gmail.com" pattern = "^[^ ]+@[^ ]+\.[a-z]{2,3}$" placeholder = "ejemplo@gmail.com" required>
+                             <input type="text" name="Email" id="Email" class="form-control" placeholder="example@gmail.com" placeholder = "ejemplo@gmail.com" required>
                               <div class="invalid-feedback">
                                 Ingrese un email valido
                               </div>
