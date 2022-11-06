@@ -66,7 +66,7 @@ array_pop($resultado);
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
                                <input type="text" value= "<?php echo $row['NombreNegocio'];?>" name="NombreNegocio" id="NombreNegocio"class="form-control" pattern = "^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                             <div class="invalid-feedback">
+                             <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
                              </div>
                           </div>
@@ -75,7 +75,7 @@ array_pop($resultado);
                             <div class="col-lg-10">
                                 <label for="password" class="form-label">Contraseña:</label>
                                  <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
-                                 <div class="invalid-feedback">
+                                 <div id = "validacion2" class="invalid-feedback">
                                     La contrasea debe tener un minimo de 6 caracteres y maximo 14
                                   </div>
 
@@ -93,20 +93,18 @@ array_pop($resultado);
                           <div class="col">
                               <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
-                             <div class="invalid-feedback">
+                             <div id = "validacion3" class="invalid-feedback">
                                 El telefono debe tener 8 digitos y comenzar con el 6 o el 7
                              </div>
                           </div>
                         
-
                           <div class="col">
                             <label for="Ubicacion" class="form-label">Ubicación: </label>
                             <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control" placeholder="https://goo.gl/maps/........." pattern = "https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+|" required>
-                            <div class="invalid-feedback">
+                            <div id = "validacion4" class="invalid-feedback">
                               Ingrese una ubicacion valida
                             </div>
                           </div>
-                        
                         
                           <div class="col">
                              <label for="Descripcion" class="form-label">Descripción: </label>
@@ -164,7 +162,7 @@ array_pop($resultado);
                 </form>
             </div>
     </div>
-    <script src="javascript/validacion.js"></script>
+    <script src="javascript/validacionFormularioVendedoresEditar.js"></script>
     <script src="javascript/paraElOjo.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
