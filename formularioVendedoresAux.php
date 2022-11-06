@@ -64,8 +64,8 @@
                             <div class="col-lg-10">
                                 <label for="password" class="form-label">Contraseña:</label>
                                  <input name="password" type="password" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
-                                 <div class="invalid-feedback">
-                                    La contrasea debe tener un minimo de 6 caracteres y maximo 14
+                                 <div id = "validacion3" class="invalid-feedback">
+                                    La contraseña debe tener un minimo de 6 caracteres y maximo 14
                                   </div>
                             </div>
                             <div class="col-lg-2 my-2">
@@ -81,7 +81,7 @@
                           <div class="col">
                               <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
-                             <div class="invalid-feedback">
+                             <div id = "validacion4" class="invalid-feedback">
                                 El telefono debe tener 8 digitos y comenzar con el 6 o el 7
                              </div>
                           </div>
@@ -89,7 +89,7 @@
                           <div class="col">
                             <label for="Ubicacion" class="form-label">Ubicación: </label>
                             <input type="text" name="Ubicacion" id="Ubicacion" class="form-control" placeholder="https://goo.gl/maps/........." pattern = "https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+|" required>
-                            <div class="invalid-feedback">
+                            <div id = "validacion5" class="invalid-feedback">
                               Ingrese una ubicacion valida
                             </div>
                           </div>
