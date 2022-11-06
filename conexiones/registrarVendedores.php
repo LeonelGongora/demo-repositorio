@@ -18,7 +18,16 @@
    $emailactual = $_POST['Email'];
 
     $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual'  LIMIT 1");
+    if ($consultaVendedores->connect_errno) {
+        printf("Connect failed: %s\n", $mysqli->connect_error);
+        exit();
+    }
     $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' LIMIT 1");
+
+    if ($$consultaCompradores->connect_errno) {
+        printf("Coneccion fallida: %s\n", $mysqli->connect_error);
+        exit();
+    }
 
     if (mysqli_num_rows($consultaVendedores) > 0){
         $url = '../formularioVendedoresFallido.php';
@@ -27,7 +36,7 @@
         $url= '../formularioVendedoresFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
-        
+
         session_start();
        $_SESSION['email1'] = $_POST['Email'];
        $_SESSION['pass1'] = $_POST['password'];
