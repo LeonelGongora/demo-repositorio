@@ -62,7 +62,7 @@ array_pop($resultado);
                       Registrarse
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="formularioVendedoresAux.html">Vendedor</a></li>
+                    <li><a class="dropdown-item" href="formularioVendedoresAux.php">Vendedor</a></li>
                     <li><a class="dropdown-item" href="formularioCompradores.php">Comprador</a></li>
                   </ul>
                 </li>
