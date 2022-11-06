@@ -9,7 +9,10 @@
     rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="css/estiloVendedores.css">
+  
+  
   <title>Imperfect Food</title>
 </head>
 <body>
@@ -90,16 +93,14 @@
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
                   </div>
-
-                        <div class="col-lg-4 align-self-center">
-
                             <style>
                             #output { 
                                 position:relative; 
                                 left:70px; 
                             } 
                             </style>
-    
+
+                        <div class="col-lg-4 align-self-center">
                               <img  id="output" top= ""width="200px" height="200px"/>
                              <div style="opacity: 0;">
                                 Textosasasa

@@ -37,7 +37,7 @@
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
 
-        session_start();
+       session_start();
        $_SESSION['email1'] = $_POST['Email'];
        $_SESSION['pass1'] = $_POST['password'];
 
