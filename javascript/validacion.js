@@ -15,7 +15,7 @@
           console.log(alertas);
 
           if (!formulario[0].value.match(pattern1)) {
-            formulario[0].classList.remove("invalid-feedback 2");
+            formulario[0].classList.remove("invalid-feedback");
             event.preventDefault()
             event.stopPropagation()
           }
