@@ -128,7 +128,7 @@ array_pop($resultado);
                               Textosasasa
                             </div>
                           <div class="row">
-                            <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)">
+                            <input type="file" value = "data:image/jpg;base64,<?php echo base64_encode($row['ImagenVendedor']);?>  name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)">
                           <div class="invalid-feedback">Necesita ingresar una imagen</div>
                           </div>
                           
@@ -143,7 +143,7 @@ array_pop($resultado);
                           </script>
 
                         </div>
-                        
+
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
                                   <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
