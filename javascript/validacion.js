@@ -14,7 +14,7 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
 
-          if (!form.checkValidity()) {
+          if (!formulario[0].value.match(pattern1s)) {
             event.preventDefault()
             event.stopPropagation()
             
@@ -22,7 +22,6 @@
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
-            
           }
 
           form.classList.add('was-validated')

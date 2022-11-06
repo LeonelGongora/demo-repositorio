@@ -46,8 +46,8 @@
                             
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
-                               <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control" pattern = "^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                             <div id = "validacion1" class="validacion1 invalid-feedback">
+                               <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control" required>
+                             <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
                              </div>
                           </div>
