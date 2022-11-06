@@ -47,9 +47,18 @@
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
                                <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control" pattern = "^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                             <div class="invalid-feedback">
-                               Ingrese un nombre valido
+                             <div class="invalid-feedback 1">
+                                <div class="invalid-feedback">
+                                  Ingrese un nombre valido
+                                </div>
                              </div>
+                             
+                             <div class="invalid-feedback 2">
+                                <div class="invalid-feedback">
+                                 Campo vacio
+                                </div>
+                             </div>
+                             
                           </div>
                           
                           <div class="col">
