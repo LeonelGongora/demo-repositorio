@@ -13,7 +13,7 @@ session_start();
 $ema = $_SESSION['email1'];
 $pas = $_SESSION['pass1'];
 
-$result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion FROM compradores WHERE compradores.Email = '$ema' AND compradores.contrasenia = '$pas' LIMIT 1");
+$result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion FROM compradores WHERE compradores.Email = '$ema' LIMIT 1");
 
 if(!$result){
    echo "ocurrio un error";
