@@ -19,12 +19,12 @@
             event.preventDefault()
             event.stopPropagation()
             document.getElementById("validacion1").innerText = "Este campo es obligatorio";
+            console.log("aaaaa");
             if(formulario[0].value == ""){
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
           }
-            
           form.classList.add('was-validated')
 
         }, false)
