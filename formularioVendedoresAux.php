@@ -46,7 +46,7 @@
                             
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
-                               <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control"  required>
+                               <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control" pattern = "^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
                              <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
                              </div>
@@ -55,7 +55,7 @@
                           
                           <div class="col">
                               <label for="Email" class="form-label">Email: </label>
-                             <input type="text" name="Email" id="Email" class="form-control" placeholder="example@gmail.com"  placeholder = "ejemplo@gmail.com" required>
+                             <input type="text" name="Email" id="Email" class="form-control" placeholder="example@gmail.com"  placeholder = "ejemplo@gmail.com" pattern = "^[^ ]+@[^ ]+\.[a-z]{2,3}$" required>
                               <div id = "validacion2" class="invalid-feedback">
                                 Ingrese un email valido
                               </div>
