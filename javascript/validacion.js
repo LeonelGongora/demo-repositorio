@@ -18,7 +18,7 @@
           if (!formulario[0].value.match(pattern1)) {
             event.preventDefault()
             event.stopPropagation()
-            document.getElementById("validacion1").innerText = "Ingrese un email valido";
+            document.getElementById("validacion1").innerText = "Ingrese un nombre valido";
             console.log("aaaaa");
             if(formulario[0].value == ""){
             
@@ -27,6 +27,21 @@
   
             }
           }
+
+          if (!formulario[1].value.match(pattern2)) {
+            event.preventDefault()
+            event.stopPropagation()
+            document.getElementById("validacion2").innerText = "Ingrese un email valido";
+            console.log("aaaaa");
+            if(formulario[1].value == ""){
+            
+              console.log("ssada");
+              document.getElementById("validacion2").innerText = "Este campo es obligatorio";
+  
+            }
+          }
+
+          
           form.classList.add('was-validated')
 
         }, false)
