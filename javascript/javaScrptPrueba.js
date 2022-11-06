@@ -2,9 +2,8 @@
     'use strict'
 
     var forms = document.querySelectorAll('.needs-validation')
-    valores = Array.prototype.slice.call(forms)
-    
-    valores.forEach(function (form) {
+
+    Array.prototype.slice.call(forms).forEach(function (form) {
         form.addEventListener('submit', function (event) {
           if (!form.checkValidity()) {
             event.preventDefault()
