@@ -18,6 +18,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        
+
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
           <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
 
@@ -29,17 +30,13 @@
        </div>
     </nav>
 
-<script>
-  var forms = document.querySelectorAll('.needs-validation')
-console.log(Array.prototype.slice.call(forms));
-</script>
 
   <section class="fondoVendedores">
     <div class = "container">
         
             <div class="row justify-content-center my-2" style="font-family:Arial;font-size: 16px">
               
-                <form action="conexiones/registrarVendedores.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
+                <form action="conexiones/registrarVendedoresAux.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
                     <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color:white;">
                         <div class="text-center" style="font-family:Arial;font-size: 18px">
                           <h2>Registro de Vendedores</h2>
@@ -103,12 +100,12 @@ console.log(Array.prototype.slice.call(forms));
                           </div>
                         </div>
                         
-                        <style>
+                          <style>
                             #output { 
                            position:relative; 
                            left:70px; 
                           } 
-                        </style>
+                          </style>
                           
                         <div class="col-lg-4 align-self-center">
     
@@ -130,6 +127,8 @@ console.log(Array.prototype.slice.call(forms));
                               }
                             };
                             </script>
+                          
+                          
                         </div>
                         
 
