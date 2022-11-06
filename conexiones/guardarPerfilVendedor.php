@@ -26,6 +26,6 @@ session_start();
    $query = "UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual'";
    $resultado = $conn->query($query);
 
-	$url= '../paginaPrincipalVendedores.php';
+	$url= '../index.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>
