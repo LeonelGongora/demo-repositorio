@@ -53,7 +53,7 @@
                     <div class="field password">
                       <div class="input-area">
                         <label for="Password" class="form-label">Contraseña: </label>
-                        <input type="text" name="Password" id="Password" class="form-control" >
+                        <input type="text" name="password" id="password" class="form-control" >
                       </div>
                       <div class="error error-txt">Este campo no puede estar vacio</div>
                     </div>
@@ -90,8 +90,6 @@
                   </div>
                   </div>
 
-                        
-                          
                         <div class="col-lg-4 align-self-center">
 
                             <style>

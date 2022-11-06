@@ -107,7 +107,7 @@ form.onsubmit = (e)=>{
   }
 
   function checkDescription(){ 
-    let pattern = /^[A-Z|a-z|0-9]{3,20}$/ ; 
+    let pattern = /^[A-Z|a-z|0-9|.|,|\s]{30,300}$/ ; 
     if(!deInput.value.match(pattern)){ 
       deField.classList.add("error");
       deField.classList.remove("valid");
