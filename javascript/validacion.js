@@ -14,16 +14,15 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
 
-          if (!formulario[0].value.match(pattern1)) {
+          
             event.preventDefault()
             event.stopPropagation()
             if(formulario[0].value == ""){
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
-          }
-            
           
+            
           form.classList.add('was-validated')
 
         }, false)
