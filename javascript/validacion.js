@@ -6,7 +6,7 @@
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          if (form.input.length === 0) {
+          if (form.childNodes.length == 0) {
             event.preventDefault()
             event.stopPropagation()
           }
