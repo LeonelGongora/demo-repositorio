@@ -15,6 +15,7 @@
           console.log(alertas);
 
           if (!formulario[0].value.match(pattern1)) {
+            console.log("ssada");
            
             (formulario[0].value != "") ?  document.getElementById("validacion1").innerText = "Ingrese un nombre valido" :  document.getElementById("validacion1").innerText = "Este campo es obligatorio";
 
