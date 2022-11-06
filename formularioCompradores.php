@@ -41,7 +41,7 @@
                     <label for="NombreNegocio" class="form-label">Nombre:</label>
                     <input type="text" name="NombreNegocio" id="NombreNegocio" class="form-control"
                       pattern="^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion1" class="invalid-feedback">
                       Ingrese un nombre valido
                     </div>
       
@@ -52,7 +52,7 @@
                     <label for="Email" class="form-label">Email: </label>
                     <input type="text" name="Email" id="Email" class="form-control" pattern="^[^ ]+@[^ ]+\.[a-z]{2,3}$"
                       placeholder="ejemplo@gmail.com" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion2" class="invalid-feedback">
                       Ingrese un email valido
                     </div>
                   </div>
@@ -63,7 +63,7 @@
                       <label for="password" class="form-label">Contraseña:</label>
                       <input name="password" type="password" class="form-control" id="password" aria-label="password"
                         aria-describedby="basic-addon1" pattern="^[A-Z|a-z|0-9|&|$|@|-|%|*|\s|#|,|.|;|+|/]{6,14}$" required />
-                      <div class="invalid-feedback">
+                      <div id = "validacion3" class="invalid-feedback">
                         La contrasea debe tener un minimo de 6 caracteres y maximo 14
                       </div>
       
@@ -100,7 +100,7 @@
                   <div class="col">
                     <label for="Telefono" class="form-label">Teléfono: </label>
                     <input type="text" name="Telefono"  id="Telefono" class="form-control" pattern="[7|6][0-9]{7}$" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion4" class="invalid-feedback">
                       El telefono debe tener 8 digitos y comenzar con el 6 o el 7
                     </div>
                   </div>
@@ -113,7 +113,7 @@
                     <label for="validationCustom05" class="form-label">Ubicación: </label>
                     <input type="text" name="Ubicacion" id="Ubicacion" class="form-control"
                       placeholder="https://goo.gl/maps/........." pattern="https:\/\/goo.gl\/maps+\/\w+" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion5" class="invalid-feedback">
                       Ingrese una ubicacion valida
                     </div>
       

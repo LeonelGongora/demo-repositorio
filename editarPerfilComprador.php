@@ -71,7 +71,7 @@ array_pop($resultado);
                     <label for="NombreNegocio" class="form-label">Nombre:</label>
                     <input type="text" value= "<?php echo $row['NombreNegocio'];?>" name="NombreNegocio" id="NombreNegocio" class="form-control"
                       pattern="^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion1" class="invalid-feedback">
                       Ingrese un nombre valido
                     </div>
       
@@ -82,7 +82,7 @@ array_pop($resultado);
                       <label for="password" class="form-label">Contraseña:</label>
                       <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password"
                         aria-describedby="basic-addon1" pattern="^[A-Z|a-z|0-9|&|$|@|-|%|*|\s|#|,|.|;|+|/]{6,14}$" required />
-                      <div class="invalid-feedback">
+                      <div id = "validacion2" class="invalid-feedback">
                         La contrasea debe tener un minimo de 6 caracteres y maximo 14
                       </div>
       
@@ -119,7 +119,7 @@ array_pop($resultado);
                   <div class="col">
                     <label for="Telefono" class="form-label">Teléfono: </label>
                     <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono"  id="Telefono" class="form-control" pattern="[7|6][0-9]{7}$" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion3" class="invalid-feedback">
                       El telefono debe tener 8 digitos y comenzar con el 6 o el 7
                     </div>
                   </div>
@@ -132,7 +132,7 @@ array_pop($resultado);
                     <label for="validationCustom05" class="form-label">Ubicación: </label>
                     <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control"
                       placeholder="https://goo.gl/maps/........." pattern="https:\/\/goo.gl\/maps+\/\w+" required>
-                    <div class="invalid-feedback">
+                    <div id = "validacion4" class="invalid-feedback">
                       Ingrese una ubicacion valida
                     </div>
       
