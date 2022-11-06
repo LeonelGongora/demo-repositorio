@@ -1,12 +1,5 @@
 
 
-
-
-
-
-
-
-    
     (function () {
     'use strict'
     let pattern1 = /^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$/; 
@@ -20,8 +13,9 @@
           var formulario = form.getElementsByTagName("input");
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
+
           if (!formulario[0].value.match(pattern1)) {
-            formulario[0].classList.remove("invalid-feedback");
+            formulario[0].classList.remove("invalid-feedback 2");
             event.preventDefault()
             event.stopPropagation()
           }
