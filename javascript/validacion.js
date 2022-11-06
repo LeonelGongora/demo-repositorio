@@ -15,13 +15,14 @@
           console.log(alertas);
 
           if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
             
             if(formulario[0].value == ""){
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
-            event.preventDefault()
-            event.stopPropagation()
+            
           }
 
           form.classList.add('was-validated')
