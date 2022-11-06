@@ -21,9 +21,10 @@
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
-          }else{
-            form.classList.add('was-validated')
           }
+            
+          
+          form.classList.add('was-validated')
 
         }, false)
       })
