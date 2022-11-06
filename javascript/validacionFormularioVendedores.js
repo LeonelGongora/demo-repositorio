@@ -14,7 +14,7 @@
         form.addEventListener('submit', function (event) {
           var formulario = form.getElementsByTagName("input");
           var alertas = form.getElementsByClassName("invalid-feedback");
-          console.log(alertas);
+          console.log(formulario);
 
 
           if (!formulario[0].value.match(pattern1)) {
@@ -23,7 +23,6 @@
             document.getElementById("validacion1").innerText = "Ingrese un nombre valido";
             console.log("aaaaa");
             if(formulario[0].value == ""){
-            
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
   
