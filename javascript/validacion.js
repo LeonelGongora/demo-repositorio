@@ -21,7 +21,7 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
           if (!formulario[0].value.match(pattern1)) {
-
+            alertas[0].preventDefault()
             event.preventDefault()
             event.stopPropagation()
           }
