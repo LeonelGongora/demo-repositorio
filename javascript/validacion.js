@@ -9,20 +9,15 @@
     
     (function () {
     'use strict'
+    let pattern1 = /^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$/; 
 
     var forms = document.querySelectorAll('.needs-validation')
 
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          var valores = form.getElementsByTagName("input");
-
-          console.log(forms)
-          console.log(form)
-          console.log(valores)
-          console.log(event)
-          
-          if (!form.checkValidity()) {
+          var formulario = form.getElementsByTagName("input");
+          if (!formulario[0].value.match(pattern1)) {
             event.preventDefault()
             event.stopPropagation()
           }
