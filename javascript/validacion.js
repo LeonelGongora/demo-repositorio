@@ -22,6 +22,7 @@
           console.log(alertas);
           if (!formulario[0].value.match(pattern1)) {
             alertas[0].preventDefault()
+            alertas[0].stopPropagation()
             event.preventDefault()
             event.stopPropagation()
           }
