@@ -64,6 +64,11 @@
       
                 }
               }
+
+              if (formulario[5].files.length == 0) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
     
               form.classList.add('was-validated')
     
