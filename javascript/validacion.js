@@ -17,15 +17,13 @@
           if (!formulario[0].value.match(pattern1)) {
             event.preventDefault()
             event.stopPropagation()
-            
             if(formulario[0].value == ""){
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
-            }else{
-              formulario[0].classList.add('was-validated')
             }
+          }else{
+            formulario[0].classList.add('was-validated')
           }
-          
         }, false)
       })
   })()
