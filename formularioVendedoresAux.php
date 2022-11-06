@@ -47,11 +47,8 @@
                           <div class="col">
                               <label for="NombreNegocio" class="form-label">Nombre de Negocio:</label>
                                <input type="text" name="NombreNegocio" id="NombreNegocio"class="form-control" required>
-                             <div class="invalid1 invalid-feedback">
+                             <div id = "validacion1" class="invalid-feedback">
                                Ingrese un nombre valido
-                             </div>
-                             <div class="invalid2 invalid-feedback">
-                               campo vacio
                              </div>
                           </div>
                           

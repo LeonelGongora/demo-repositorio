@@ -1,7 +1,7 @@
 
 
     (function () {
-    'use strict'
+
     let pattern1 = /^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$/; 
     let pattern2 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
 
@@ -15,8 +15,8 @@
           console.log(alertas);
 
           if (!formulario[0].value.match(pattern1)) {
-            formulario[0].classList.remove("invalid1");
-            formulario[0].classList.add("invalid2");
+            document.getElementById("validacion1").innerText = "Este campo es obligatorio";
+
             event.preventDefault()
             event.stopPropagation()
           }
