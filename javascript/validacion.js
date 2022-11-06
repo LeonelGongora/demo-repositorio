@@ -14,7 +14,7 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
 
-          if (formulario[0].value == "") {
+          if (document.getElementById('NombreNegocio').value.length == 0) {
             document.getElementById("validacion1").innerText = "Este campo es obligatorio";
 
             event.preventDefault()
