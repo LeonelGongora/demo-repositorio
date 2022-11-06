@@ -18,7 +18,10 @@
         .forEach(function (form) {
         form.addEventListener('submit', function (event) {
           var formulario = form.getElementsByTagName("input");
+          var alertas = form.getElementsByClassName("invalid-feedback");
+          console.log(alertas);
           if (!formulario[0].value.match(pattern1)) {
+
             event.preventDefault()
             event.stopPropagation()
           }
