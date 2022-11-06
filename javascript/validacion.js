@@ -16,7 +16,7 @@
 
           if (!form.checkValidity()) {
             
-            if(formulario[0].value = ""){
+            if(formulario[0].value == ""){
               console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
             }
