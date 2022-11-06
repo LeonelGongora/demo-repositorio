@@ -27,7 +27,7 @@
 
         <div class="row justify-content-center my-5">
             <div class="col-lg-7">
-                <form action="conexiones/registrarVendedores.php" method="post" enctype = "multipart/form-data">
+                <form action="conexiones/registrarVendedores.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
 
                   <div class="col-md-8">
                     <div class="field name">
@@ -139,6 +139,7 @@
         </div>
     </div>
   <script src="javascript/validacionVendedores.js"></script>
+  <script src="javascript/validacion.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
     crossorigin="anonymous"></script>
