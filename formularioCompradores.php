@@ -136,7 +136,7 @@
       </div>
     </section>
   
-  <script src="javascript/validacion.js"></script>
+  <script src="javascript/validacionFormularioCompradores.js"></script>
   <script src="javascript/paraElOjo.js"></script>
   <script src="javascript/confirmacionContraseña.js"></script>
   <script src="javascript/paraElOjoConfirmar.js"></script>

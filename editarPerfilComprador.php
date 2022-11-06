@@ -157,7 +157,7 @@ array_pop($resultado);
       <br>
     </section>
   
-  <script src="javascript/validacion.js"></script>
+  <script src="javascript/validacionFormularioCompradoresEditar.js"></script>
   <script src="javascript/paraElOjo.js"></script>
   <script src="javascript/confirmacionContraseña.js"></script>
   <script src="javascript/paraElOjoConfirmar.js"></script>
