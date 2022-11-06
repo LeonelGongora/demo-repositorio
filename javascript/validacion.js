@@ -14,18 +14,12 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
 
-          if (document.getElementById('NombreNegocio').value.length == 0) {
-            document.getElementById("validacion1").innerText = "Este campo es obligatorio";
+          if (!formulario[0].value.match(pattern1)) {
+           
+            (formulario[0].value != "") ?  document.getElementById("validacion1").innerText = "Ingrese un nombre valido" :  document.getElementById("validacion1").innerText = "Este campo es obligatorio";
 
             event.preventDefault()
             event.stopPropagation()
-
-          }else if(!formulario[0].value.match(pattern1)){
-            document.getElementById("validacion1").innerText = "Ingrese un nombre valido";
-
-            event.preventDefault()
-            event.stopPropagation()
-          }else{
 
           }
 
