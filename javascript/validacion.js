@@ -14,20 +14,17 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(alertas);
 
-          if (!formulario[0].value.match(pattern1)) {
-            console.log("ssada");
-           
-            (formulario[0].value != "") ?  document.getElementById("validacion1").innerText = "Ingrese un nombre valido" :  document.getElementById("validacion1").innerText = "Este campo es obligatorio";
+          if (!form.checkValidity()) {
+            
+            if(!formulario[0].value != ""){
+              console.log("ssada");
+              document.getElementById("validacion1").innerText = "Este campo es obligatorio";
 
-            event.preventDefault()
-            event.stopPropagation()
-
-          }
-
-          if (!formulario[1].value.match(pattern2)) {
+            }
             event.preventDefault()
             event.stopPropagation()
           }
+
           form.classList.add('was-validated')
         }, false)
       })
