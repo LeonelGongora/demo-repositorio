@@ -3,9 +3,10 @@
 
     var forms = document.querySelectorAll('.needs-validation')
 
-    Array.prototype.slice.call(forms).forEach(function (form) {
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-          if (form.childNodes.length === 0) {
+          if (form.input.length === 0) {
             event.preventDefault()
             event.stopPropagation()
           }
