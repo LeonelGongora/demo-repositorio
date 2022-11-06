@@ -19,7 +19,16 @@
 
             event.preventDefault()
             event.stopPropagation()
+
+          }else if(!formulario[0].value.match(pattern1)){
+            document.getElementById("validacion1").innerText = "Ingrese un nombre valido";
+
+            event.preventDefault()
+            event.stopPropagation()
+          }else{
+
           }
+
           if (!formulario[1].value.match(pattern2)) {
             event.preventDefault()
             event.stopPropagation()
