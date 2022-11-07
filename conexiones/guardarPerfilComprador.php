@@ -12,6 +12,7 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 session_start();
+    $_SESSION['pass1'] = $_POST['password'];
 
     $emailactual = $_SESSION['email1'];
     $passactual = $_SESSION['pass1'];
