@@ -39,7 +39,6 @@ array_pop($resultado);
     <link rel="stylesheet" href="css/estiloFormularioVendedores.css">
     <title>Imperfect Food</title>
     
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -112,9 +111,6 @@ array_pop($resultado);
                           </div>
                         </div>
 
-                       
-                        
-
                         <div class="col-lg-4 align-self-center">
                           <style>
                             #output { 
@@ -145,7 +141,7 @@ array_pop($resultado);
 
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
-                                  <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                  <a href="miPerfil.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                               </div>
                               <div style="opacity: 0;">
                                 Textosasasa
@@ -166,6 +162,5 @@ array_pop($resultado);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
     crossorigin="anonymous"></script>
-    
 </body>
 </html>

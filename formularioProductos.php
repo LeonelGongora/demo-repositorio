@@ -28,7 +28,7 @@
 
 
     <div class = "container" >
-            <div class="row justify-content-center my-2" style="font-family:Arial;font-size: 16px">
+            <div class="row justify-content-center my-4" style="font-family:Arial;font-size: 16px">
                     <form action="conexiones/registrarProductos.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
 
                       <div class="row justify-content-center my-1" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; background-color: white;">
