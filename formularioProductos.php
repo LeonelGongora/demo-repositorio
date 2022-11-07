@@ -39,15 +39,15 @@
                             <div class="col">
                                <label for="NombreDeProducto" class="form-label">Nombre de Producto:</label>
                                <input type="text" name="NombreDeProducto" id="NombreDeProducto" class="form-control" pattern ="^[A-Z|a-z|0-9|\s|/]{3,20}$" required>
-                               <div class="invalid-feedback">
+                               <div id = "validacion1" class="invalid-feedback">
                                   Ingrese un nombre de producto valido
                                </div>
                             </div>
 
                             <div class="col">
                                <label for="Precio" class="form-label">Precio: </label>
-                               <input type="text" name="Precio" id="Precio" class="form-control" pattern=^[1-9]$|^[1-9][0-9]{1,3}$|^[0-9]{1,3}[,]([0][1-9]|[1-9][0-9])$|^10000$ required>
-                               <div class="invalid-feedback">
+                               <input type="text" name="Precio" id="Precio" class="form-control" pattern= "^[1-9]$|^[1-9][0-9]{1,3}$|^[0-9]{1,3}[,]([0][1-9]|[1-9][0-9])$|^10000$" required>
+                               <div id = "validacion2" class="invalid-feedback">
                                   Ingrese un monto mayor a 0,00 y menor a 10000,00
                                 </div>
                             </div>
@@ -55,16 +55,16 @@
 
                             <div class="col">
                                <label for="PrecioDeOferta" class="form-label">Precio de Oferta:</label>
-                               <input type="text" name="PrecioDeOferta" id="PrecioDeOferta" class="form-control" pattern= ^[1-9]$|^[1-9][0-9]{1,3}$|^[0-9]{1,3}[,]([0][1-9]|[1-9][0-9])$|^10000$ required>
-                               <div class="invalid-feedback">
+                               <input type="text" name="PrecioDeOferta" id="PrecioDeOferta" class="form-control" pattern= "^[1-9]$|^[1-9][0-9]{1,3}$|^[0-9]{1,3}[,]([0][1-9]|[1-9][0-9])$|^10000$" required>
+                               <div id = "validacion3" class="invalid-feedback">
                                  Ingrese un monto mayor a 0,00 y menor a 10000,00
                                 </div>
                             </div>
 
                             <div class="col">
                                 <label for="Stock" class="form-label">Stock: </label>
-                                <input type="text" name="Stock" id="Stock" class="form-control" pattern=^([1-9][0-9]{0,3}|10000)$ required>
-                                <div class="invalid-feedback">
+                                <input type="text" name="Stock" id="Stock" class="form-control" pattern= "^([1-9][0-9]{0,3}|10000)$" required>
+                                <div id = "validacion4" class="invalid-feedback">
                                    Ingrese un stock mayor a 0 y menor a 10 000
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             </div>
                           <div class="row">
                             <input type="file" name="ImagenProducto" id="ImagenProducto" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)"  required>
-                          <div class="invalid-feedback">Necesita ingresar una imagen</div>
+                          <div id = "validacion5" class="invalid-feedback">Necesita ingresar una imagen</div>
                           </div>
                           
                           <script>

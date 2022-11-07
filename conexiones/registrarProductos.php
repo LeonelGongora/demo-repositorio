@@ -30,20 +30,5 @@ $query_builder = TRUE;
 	   echo "La imagen no pudo insertarse";
     }
 
-	// Database connection
-	/*
-	if($conn->connect_error){
-		echo "$conn->connect_error";
-		die("Connection Failed : ". $conn->connect_error);
-	} else {
-		$stmt = $conn->prepare("insert into productos(NombreDeProducto, Precio, PrecioDeOferta, Stock, Descripcion) values(?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssss", $nombre, $precio , $precioOferta, $stock, $descripcion);
-		$execval = $stmt->execute();
-		//echo $execval;
-		//echo "Registration successfully...";
-		$stmt->close();
-		$conn->close();
-	}
-	*/
 ?>
 
