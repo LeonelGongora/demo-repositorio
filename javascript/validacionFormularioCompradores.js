@@ -50,7 +50,7 @@
               if (!formulario[4].value.match(pattern4)) {
                 event.preventDefault()
                 event.stopPropagation()
-                document.getElementById("validacion4").innerText = "El telefono debe tener 8 digitos y comenzar con el 6 o el 7";
+                document.getElementById("validacion4").innerText = "El teléfono debe tener 8 digitos y comenzar con el 6 o el 7";
               
                 if(formulario[4].value == ""){
                 
@@ -62,7 +62,7 @@
               if (!formulario[5].value.match(pattern5)) {
                 event.preventDefault()
                 event.stopPropagation()
-                document.getElementById("validacion5").innerText = "Ingrese una ubicacion valida";
+                document.getElementById("validacion5").innerText = "Ingrese una ubicación valida";
                 if(formulario[5].value == ""){
                 
                   document.getElementById("validacion5").innerText = "Este campo es obligatorio";

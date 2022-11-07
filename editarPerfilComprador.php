@@ -120,7 +120,7 @@ array_pop($resultado);
                     <label for="Telefono" class="form-label">Teléfono: </label>
                     <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono"  id="Telefono" class="form-control" pattern="[7|6][0-9]{7}$" required>
                     <div id = "validacion3" class="invalid-feedback">
-                      El telefono debe tener 8 digitos y comenzar con el 6 o el 7
+                      El teléfono debe tener 8 digitos y comenzar con el 6 o el 7
                     </div>
                   </div>
       
@@ -133,7 +133,7 @@ array_pop($resultado);
                     <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control"
                       placeholder="https://goo.gl/maps/........." pattern="https:\/\/goo.gl\/maps+\/\w+" required>
                     <div id = "validacion4" class="invalid-feedback">
-                      Ingrese una ubicacion valida
+                      Ingrese una ubicación valida
                     </div>
       
                   </div>

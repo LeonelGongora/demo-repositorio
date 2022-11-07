@@ -8,6 +8,7 @@
     rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estiloFormularioProductos.css">
     <title>Imperfect Food</title>
     
 </head>
@@ -109,7 +110,7 @@
                         
                         <div class="d-flex justify-content-center flex-nowrap my-3">
                               <div >
-                                  <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
+                                  <a href="miPerfil.php" class="btn btn-danger rounded-0" role="button">Cancelar</a>
                               </div>
                               <div style="opacity: 0;">
                                 Textosasasa
