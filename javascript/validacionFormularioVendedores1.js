@@ -7,7 +7,7 @@
       let pattern2 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
       let pattern3 = /^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$/; 
       let pattern4 = /[7|6][0-9]{7}$/;
-      let pattern5 = /https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+|/;
+      let pattern5 = /https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+/;
   
       var forms = document.querySelectorAll('.needs-validation')
   
