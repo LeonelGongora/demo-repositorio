@@ -31,9 +31,11 @@
     
             $query1 = "DELETE FROM vendedores ORDER BY id DESC LIMIT 1";
             $insertar1 = $conn->query($query1);
+
+            echo $_SESSION['idUsuario'];
         
-            $url= '../paginaPrincipalVendedores.php';
-            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+            //$url= '../paginaPrincipalVendedores.php';
+            //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
            }else{
             echo "Los datos no pudieron insertarse";
         } 
@@ -50,9 +52,11 @@
     
             $query1 = "DELETE FROM compradores ORDER BY id DESC LIMIT 1";
             $insertar1 = $conn->query($query1);
+
+            echo $_SESSION['idUsuario'];
         
-            $url= '../paginaPrincipalCompradores.php';
-            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+            //$url= '../paginaPrincipalCompradores.php';
+            //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
            }else{
             echo "Los datos no pudieron insertarse";
         } 
