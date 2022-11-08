@@ -78,6 +78,11 @@
             }
           }
 
+          if (formulario[6].files.length == 0) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
           form.classList.add('was-validated')
 
         }, false)
