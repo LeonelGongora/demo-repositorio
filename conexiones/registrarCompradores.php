@@ -22,7 +22,9 @@
         $url= '../formularioCompradoresFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
+        
         session_start();
+
         //$_SESSION['email1'] = $_POST['Email'];
         //$_SESSION['pass1'] = $_POST['password'];
 
@@ -32,23 +34,18 @@
 	    $number = $_POST['Telefono'];
         $ubicacion = $_POST['Ubicacion'];
 
-	    if($conn->connect_error){
-		   echo "$conn->connect_error";
-		   die("Connection Failed : ". $conn->connect_error);
-	    } else {
-		   $stmt = $conn->prepare("insert into compradores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion) values(?, ?, ?, ?, ?)");
-		   $stmt->bind_param("sssis", $Name, $password , $email, $number, $ubicacion);
-		   $execval = $stmt->execute();
+        $query = "INSERT INTO compradores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion')";
+        $insertar = $conn->query($query);
+        if($insertar){
 
-		   $stmt->close();
-		   $conn->close();
-
-           $last_id = $conn->insert_id;
-           $_SESSION['idUsuario'] = $last_id;
-
-		   $url= '../paginaPrincipalCompradores.php';
-           echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-	    }
+            $last_id = $conn->insert_id;
+            $_SESSION['idUsuario'] = $last_id;
+    
+            $url= '../paginaPrincipalCompradores.php';
+            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+        }else{
+            echo "Los datos no pudieron insertarse";
+        }  
     } 
 ?>
 
