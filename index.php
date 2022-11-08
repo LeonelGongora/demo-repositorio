@@ -43,8 +43,6 @@ array_pop($resultado);
     rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
     crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="flex-wrap:nowrap;">
