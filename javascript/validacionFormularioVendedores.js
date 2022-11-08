@@ -22,9 +22,7 @@
             event.preventDefault()
             event.stopPropagation()
             document.getElementById("validacion1").innerText = "Ingrese un nombre valido";
-            console.log("aaaaa");
             if(formulario[0].value == ""){
-              console.log("ssada");
               document.getElementById("validacion1").innerText = "Este campo es obligatorio";
   
             }
@@ -34,10 +32,8 @@
             event.preventDefault()
             event.stopPropagation()
             document.getElementById("validacion2").innerText = "Ingrese un email valido";
-            console.log("aaaaa");
             if(formulario[1].value == ""){
             
-              console.log("ssada");
               document.getElementById("validacion2").innerText = "Este campo es obligatorio";
   
             }
@@ -47,10 +43,9 @@
             event.preventDefault()
             event.stopPropagation()
             document.getElementById("validacion3").innerText = "La contraseña debe tener un minimo de 6 caracteres y maximo 14";
-            console.log("aaaaa");
+            
             if(formulario[2].value == ""){
             
-              console.log("ssada");
               document.getElementById("validacion3").innerText = "Este campo es obligatorio";
   
             }
