@@ -18,7 +18,6 @@
           var alertas = form.getElementsByClassName("invalid-feedback");
           console.log(formulario);
 
-
           if (!formulario[0].value.match(pattern1)) {
             event.preventDefault()
             event.stopPropagation()
@@ -80,8 +79,9 @@
   
             }
           }
+          console.log(formulario[6].files.length)
 
-          if (imagen.files.length == 0) {
+          if (formulario[6].files.length == 0) {
             console.log("prueba imagen")
             event.preventDefault()
             event.stopPropagation()

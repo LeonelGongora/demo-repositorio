@@ -109,23 +109,19 @@
                           </style>
                           
                         <div class="col-lg-4 align-self-center">
-                          <style>
-                            #output { 
-                           position:relative; 
-                           left:70px; 
-                          } 
-                          </style>
+    
+                              <img  id="output" top= ""width="200px" height="200px"/>
+                             <div style="opacity: 0;">
+                                Textosasasa
+                             </div>
+                                
                           
-                          <img src="data:image/jpg;base64,<?php echo base64_encode($row['ImagenVendedor']);?>" id="output" top= ""width="200px" height="200px"/>
-                            <div style="opacity: 0;">
-                              Textosasasa
-                            </div>
-                          <div class="row">
-                            <input type="file" name="ImagenVendedor" id="ImagenVendedor" class = "form-control" accept="image/png, image/jpeg" onchange="loadFile(event)" required>
-                          <div class="invalid-feedback">Necesita ingresar una imagen</div>
-                          </div>
-                          
-                          <script>
+                               <input type="file" name="ImagenVendedor" id="ImagenVendedor" accept="image/png, image/jpeg" class = "form-control" onchange="loadFile(event)"  required>
+                               <div class="invalid-feedback">
+                                   Necesita ingresar una imagen
+                                </div>
+                             
+                            <script>
                             var loadFile = function(event) {
                               var output = document.getElementById('output');
                               output.src = URL.createObjectURL(event.target.files[0]);
@@ -133,7 +129,9 @@
                                 URL.revokeObjectURL(output.src) 
                               }
                             };
-                          </script>
+                            </script>
+                          
+                          
                         </div>
                         
                         <div class="d-flex justify-content-center flex-nowrap my-3">
