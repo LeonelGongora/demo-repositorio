@@ -27,6 +27,8 @@
        $_SESSION['email1'] = $_POST['Email'];
        $_SESSION['pass1'] = $_POST['password'];
 
+       
+
        $Name = $_POST['NombreNegocio']; 
        $password = $_POST['password'];
        $email = $_POST['Email'];
@@ -36,13 +38,41 @@
        $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
 
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
-       $resultado = $conn->query($query);
+       $insertar = $conn->query($query);
 
-       if($resultado){
-	     $url= '../paginaPrincipalVendedores.php';
-         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+       if($insertar){
+        $result = mysqli_query($conn,"SELECT id, NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1"); 
+        if(!$result){
+            echo "ocurrio un error";
+            exit;
+        }
+        for($i = 0; $resultado[$i] = mysqli_fetch_assoc($result); $i++) ;
+        // Delete last empty one
+        array_pop($resultado); 
+        if (is_array($resultado) || is_object($resultado)): {foreach($resultado as $row): 
+
+            echo base64_encode($row['id']);
+
+        endforeach;} endif;
+
+        $_SESSION['idUsuario'] = base64_encode($row['id']);
+        echo $_SESSION['idUsuario'];
+
+
+     
+
+        //$url= '../paginaPrincipalVendedores.php';
+        //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
        }else{
-	      echo "La imagen no pudo insertarse";
+        echo "La imagen no pudo insertarse";
        }
+
+       
+
+    
+    
+
+       
+        
     } 
 ?>

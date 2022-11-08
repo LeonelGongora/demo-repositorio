@@ -70,6 +70,14 @@ array_pop($resultado);
                              </div>
                           </div>
 
+                          <div class="col">
+                              <label for="Email" class="form-label">Email: </label>
+                             <input type="text" value= "<?php echo $row['Email'];?>" name="Email" id="Email" class="form-control" placeholder="example@gmail.com"  placeholder = "ejemplo@gmail.com" pattern = "^[^ ]+@[^ ]+\.[a-z]{2,3}$" required>
+                              <div id = "validacion2" class="invalid-feedback">
+                                Ingrese un email valido
+                              </div>
+                          </div>
+
                           <div class="row">
                             <div class="col-lg-10">
                                 <label for="password" class="form-label">Contraseña:</label>
