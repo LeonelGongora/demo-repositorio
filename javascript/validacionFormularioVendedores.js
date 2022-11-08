@@ -70,6 +70,7 @@
           if (!formulario[4].value.match(pattern5)) {
             event.preventDefault()
             event.stopPropagation()
+            console.log("prueba")
             document.getElementById("validacion5").innerText = "Ingrese una ubicación valida";
             if(formulario[4].value == ""){
             
@@ -79,6 +80,7 @@
           }
 
           if (formulario[6].files.length == 0) {
+            console.log()
             event.preventDefault()
             event.stopPropagation()
           }

@@ -122,6 +122,10 @@
                                 </div>
                              
                             <script>
+                              var file = document.getElementById("ImagenVendedor");
+                              if(file.files.length == 0 ){
+                                  down.innerHTML = "No files selected";
+                              }
                             var loadFile = function(event) {
                               var output = document.getElementById('output');
                               output.src = URL.createObjectURL(event.target.files[0]);
