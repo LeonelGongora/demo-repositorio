@@ -1,6 +1,8 @@
 
     (function () {
 
+      imagen = document.getElementById("ImagenVendedor")
+
     let pattern1 = /^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$/; 
     let pattern2 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
     let pattern3 = /^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$/; 
@@ -79,7 +81,7 @@
             }
           }
 
-          if (formulario[6].files.length == 0) {
+          if (imagen.files.length == 0) {
             console.log("prueba imagen")
             event.preventDefault()
             event.stopPropagation()
