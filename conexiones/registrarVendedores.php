@@ -39,8 +39,13 @@
 
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
        $insertar = $conn->query($query);
+       
+       $idPrueba = $mysqli -> insert_id;
+       echo "Prueba de ID:";
+       echo $idPrueba;
 
-       if($insertar){
+       
+       /* if($insertar){
         $result = mysqli_query($conn,"SELECT id, NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1"); 
         if(!$result){
             echo "ocurrio un error";
@@ -65,14 +70,6 @@
         //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
        }else{
         echo "La imagen no pudo insertarse";
-       }
-
-       
-
-    
-    
-
-       
-        
+       } */
     } 
 ?>
