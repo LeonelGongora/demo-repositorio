@@ -22,11 +22,11 @@
 
     if ($consultaIdCompradores->num_rows > 0) {
         while($row = $consultaIdCompradores->fetch_assoc()) {
-          echo  "Se logeo correctamente" . $row["id"];
+          echo  "Se logeo correctamente comprador" . $row["id"];
         }
     } elseif($consultaIdVendedores->num_rows > 0) {
         while($row = $consultaIdCompradores->fetch_assoc()) {
-            echo  "Se logeo correctamente" . $row["id"];
+            echo  "Se logeo correctamente vendedor" . $row["id"];
           }
     } else{
         $url= '../loginFallido.php';
