@@ -21,13 +21,13 @@
     $consultaIdVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
 
     if (mysqli_num_rows($consultaIdCompradores) > 0) {
-        while($row = $consultaIdCompradores->fetch_assoc()) {
-          echo  "Se logeo correctamente comprador" . $row["id"];
+        while ($row = $result -> fetch_row()) {
+            printf ($row[0]);
         }
     } elseif(mysqli_num_rows($consultaIdVendedores) > 0) {
-        while($row = $consultaIdCompradores->fetch_assoc()) {
-            echo  "Se logeo correctamente vendedor" . $row["id"];
-          }
+        while ($row = $result -> fetch_row()) {
+            printf ($row[0]);
+        }
     } else{
         $url= '../loginFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
