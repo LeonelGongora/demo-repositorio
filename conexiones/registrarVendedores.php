@@ -39,14 +39,10 @@
 
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
        $insertar = $conn->query($query);
-       echo "New record has id: " . $mysqli -> insert_id;
 
+       $last_id = $conn->insert_id;
+       echo "New record created successfully. Last inserted ID is: " . $last_id;
 
-       $idPrueba = $mysqli -> insert_id;
-       echo "Prueba de ID:";
-       echo $idPrueba;
-
-       
        /* if($insertar){
         $result = mysqli_query($conn,"SELECT id, NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1"); 
         if(!$result){
