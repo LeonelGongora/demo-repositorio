@@ -25,12 +25,14 @@
 
         while ($row = mysqli_fetch_row($consultaIdVendedores)) {
             print("ID: ".$row[0]."\n");
-         }
-
+            
             $last_id = $row[0];
             $_SESSION['idUsuario'] = $last_id;
 
             echo $_SESSION['idUsuario'];
+         }
+
+            
         
             //$url= '../paginaPrincipalVendedores.php';
             //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
