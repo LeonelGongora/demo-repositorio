@@ -15,8 +15,20 @@
 
     $emailactual = $_SESSION['email1'];
     $passactual = $_SESSION['pass1'];
+    
 
-    $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
+    $consultaIdCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
+
+    if ($consultaIdCompradores->num_rows > 0) {
+        // output data of each row
+        while($row = $consultaIdCompradores->fetch_assoc()) {
+          echo  "Se logeo correctamente" . $row["id"];
+        }
+      } else {
+        echo "0 results";
+    }
+
+    /* $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
     $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
 
     if (mysqli_num_rows($consultaVendedores) > 0){
@@ -29,5 +41,9 @@
     }else{
         $url= '../loginFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    } 
+    } */
+
+    
 ?>
+
+
