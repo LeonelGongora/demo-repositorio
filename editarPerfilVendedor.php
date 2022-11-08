@@ -10,8 +10,8 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 session_start();
-$ema = $_SESSION['email1'];
-$pas = $_SESSION['pass1'];
+//$ema = $_SESSION['email1'];
+//$pas = $_SESSION['pass1'];
 
 $id = $_SESSION['idUsuario'];
 

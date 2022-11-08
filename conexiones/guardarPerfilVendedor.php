@@ -12,10 +12,13 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 session_start();
-    $_SESSION['pass1'] = $_POST['password'];
 
-    $emailactual = $_SESSION['email1'];
-    $passactual = $_SESSION['pass1'];
+    //$_SESSION['pass1'] = $_POST['password'];
+
+    //$emailactual = $_SESSION['email1'];
+    //$passactual = $_SESSION['pass1'];
+
+    $id = $_SESSION['idUsuario'];
 
    $Name = $_POST['NombreNegocio']; 
    $password = $_POST['password'];
@@ -24,7 +27,7 @@ session_start();
    $descripcion = $_POST['Descripcion'];
    $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
 
-   $query = "UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.Email = '$emailactual'";
+   $query = "UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.id = '$id'";
    $resultado = $conn->query($query);
 
 	$url= '../paginaPrincipalVendedores.php';
