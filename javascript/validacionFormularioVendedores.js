@@ -80,7 +80,7 @@
           }
 
           if (formulario[6].files.length == 0) {
-            console.log()
+            console.log("prueba imagen")
             event.preventDefault()
             event.stopPropagation()
           }
