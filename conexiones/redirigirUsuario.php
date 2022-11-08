@@ -30,12 +30,9 @@
             echo $_SESSION['idUsuario'];
          }
 
-            
-        
-            //$url= '../paginaPrincipalVendedores.php';
-            //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+            $url= '../paginaPrincipalVendedores.php';
+            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
            
-
     }else if(mysqli_num_rows($consultaCompradores) > 0){
 
         $query = "INSERT INTO compradores(contrasenia,  Email) VALUES ('$password', '$email')";
