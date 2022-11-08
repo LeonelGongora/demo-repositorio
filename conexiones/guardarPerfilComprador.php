@@ -24,7 +24,7 @@ session_start();
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
 
-   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password', Email = '$email' ,Telefono = '$number', Ubicacion = '$ubicacion' WHERE vendedores.id = '$id'";
+   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password', Email = '$email' ,Telefono = '$number', Ubicacion = '$ubicacion' WHERE compradores.id = '$id'";
    $resultado = $conn->query($query);
 
 	$url= '../paginaPrincipalCompradores.php';
