@@ -21,24 +21,20 @@
 
     if (mysqli_num_rows($consultaVendedores) > 0){
 
-        $query = "INSERT INTO vendedores(contrasenia,  Email) VALUES ('$password', '$email')";
-        $insertar = $conn->query($query);
+        $consultaIdVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$email' AND vendedores.contrasenia = '$password' LIMIT 1");
 
-        if($insertar){
+        while ($row = mysqli_fetch_row($consultaIdVendedores)) {
+            print("ID: ".$row[0]."\n");
+         }
 
-            $last_id = $conn->insert_id;
+            $last_id = $row[0];
             $_SESSION['idUsuario'] = $last_id;
-    
-            $query1 = "DELETE FROM vendedores ORDER BY id DESC LIMIT 1";
-            $insertar1 = $conn->query($query1);
 
             echo $_SESSION['idUsuario'];
         
             //$url= '../paginaPrincipalVendedores.php';
             //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-           }else{
-            echo "Los datos no pudieron insertarse";
-        } 
+           
 
     }else if(mysqli_num_rows($consultaCompradores) > 0){
 
@@ -65,10 +61,6 @@
         $url= '../loginFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     } 
-
-    
-
-    
 
     //delete from marks order by id desc limit 1
     
