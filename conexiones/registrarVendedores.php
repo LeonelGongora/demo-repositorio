@@ -43,8 +43,6 @@
        if($insertar){
 
         $last_id = $conn->insert_id;
-        echo "New record created successfully. Last inserted ID is: " . $last_id;
-
         $_SESSION['idUsuario'] = $last_id;
     
         $url= '../paginaPrincipalVendedores.php';
