@@ -22,12 +22,13 @@ session_start();
 
    $Name = $_POST['NombreNegocio']; 
    $password = $_POST['password'];
+   $email = $_POST['Email'];
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
    $descripcion = $_POST['Descripcion'];
    $imagen = addslashes(file_get_contents($_FILES['ImagenVendedor']['tmp_name']));
 
-   $query = "UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.id = '$id'";
+   $query = "UPDATE vendedores SET NombreNegocio = '$Name', contrasenia = '$password', Email = '$email' ,Telefono = '$number', Ubicacion = '$ubicacion', Descripcion = '$descripcion', ImagenVendedor =  '$imagen' WHERE vendedores.id = '$id'";
    $resultado = $conn->query($query);
 
 	$url= '../paginaPrincipalVendedores.php';
