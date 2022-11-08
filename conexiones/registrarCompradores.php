@@ -23,8 +23,8 @@
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }else{
         session_start();
-        $_SESSION['email1'] = $_POST['Email'];
-        $_SESSION['pass1'] = $_POST['password'];
+        //$_SESSION['email1'] = $_POST['Email'];
+        //$_SESSION['pass1'] = $_POST['password'];
 
 	    $Name = $_POST['NombreNegocio']; 
         $password = $_POST['password'];
@@ -39,10 +39,13 @@
 		   $stmt = $conn->prepare("insert into compradores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion) values(?, ?, ?, ?, ?)");
 		   $stmt->bind_param("sssis", $Name, $password , $email, $number, $ubicacion);
 		   $execval = $stmt->execute();
-		   //echo $execval;
-		   //echo "Registration successfully...";
+
 		   $stmt->close();
 		   $conn->close();
+
+           $last_id = $conn->insert_id;
+           $_SESSION['idUsuario'] = $last_id;
+
 		   $url= '../paginaPrincipalCompradores.php';
            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 	    }

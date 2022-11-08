@@ -10,7 +10,7 @@
    // Connect to DB
    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-   //$emailactual = $_POST['Email'];
+   $emailactual = $_POST['Email'];
 
     $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual'  LIMIT 1");
     $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' LIMIT 1");
@@ -38,7 +38,6 @@
 
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
        $insertar = $conn->query($query);
-
        if($insertar){
 
         $last_id = $conn->insert_id;

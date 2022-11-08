@@ -12,17 +12,19 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 session_start();
-    $_SESSION['pass1'] = $_POST['password'];
+    //$_SESSION['pass1'] = $_POST['password'];
 
-    $emailactual = $_SESSION['email1'];
-    $passactual = $_SESSION['pass1'];
+    //$emailactual = $_SESSION['email1'];
+    //$passactual = $_SESSION['pass1'];
+    $id = $_SESSION['idUsuario'];
 
    $Name = $_POST['NombreNegocio']; 
    $password = $_POST['password'];
+   $email = $_POST['Email'];
    $number = $_POST['Telefono'];
    $ubicacion = $_POST['Ubicacion'];
 
-   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password',  Telefono = '$number', Ubicacion = '$ubicacion' WHERE compradores.Email = '$emailactual'";
+   $query = "UPDATE compradores SET NombreNegocio = '$Name', contrasenia = '$password', Email = '$email' ,Telefono = '$number', Ubicacion = '$ubicacion' WHERE vendedores.id = '$id'";
    $resultado = $conn->query($query);
 
 	$url= '../paginaPrincipalCompradores.php';

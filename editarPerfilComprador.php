@@ -10,10 +10,12 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 session_start();
-$ema = $_SESSION['email1'];
-$pas = $_SESSION['pass1'];
+//$ema = $_SESSION['email1'];
+//$pas = $_SESSION['pass1'];
 
-$result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion FROM compradores WHERE compradores.Email = '$ema' AND compradores.contrasenia = '$pas' LIMIT 1");
+$id = $_SESSION['idUsuario'];
+
+$result = mysqli_query($conn,"SELECT NombreNegocio, contrasenia, Email, Telefono, Ubicacion FROM compradores WHERE vendedores.id = '$id' LIMIT 1");
 
 if(!$result){
    echo "ocurrio un error";
@@ -77,12 +79,21 @@ array_pop($resultado);
       
                   </div>
 
+                  <div class="col">
+                    <label for="Email" class="form-label">Email: </label>
+                    <input type="text" name="Email" id="Email" class="form-control" pattern="^[^ ]+@[^ ]+\.[a-z]{2,3}$"
+                      placeholder="ejemplo@gmail.com" required>
+                    <div id = "validacion2" class="invalid-feedback">
+                      Ingrese un email valido
+                    </div>
+                  </div>
+
                   <div class="row">
                     <div class="col">
                       <label for="password" class="form-label">Contraseña:</label>
                       <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password"
                         aria-describedby="basic-addon1" pattern="^[A-Z|a-z|0-9|&|$|@|-|%|*|\s|#|,|.|;|+|/]{6,14}$" required />
-                      <div id = "validacion2" class="invalid-feedback">
+                      <div id = "validacion3" class="invalid-feedback">
                         La contrasea debe tener un minimo de 6 caracteres y maximo 14
                       </div>
       
@@ -119,7 +130,7 @@ array_pop($resultado);
                   <div class="col">
                     <label for="Telefono" class="form-label">Teléfono: </label>
                     <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono"  id="Telefono" class="form-control" pattern="[7|6][0-9]{7}$" required>
-                    <div id = "validacion3" class="invalid-feedback">
+                    <div id = "validacion4" class="invalid-feedback">
                       El teléfono debe tener 8 digitos y comenzar con el 6 o el 7
                     </div>
                   </div>
@@ -132,7 +143,7 @@ array_pop($resultado);
                     <label for="validationCustom05" class="form-label">Ubicación: </label>
                     <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control"
                       placeholder="https://goo.gl/maps/........." pattern="https:\/\/goo.gl\/maps+\/\w+" required>
-                    <div id = "validacion4" class="invalid-feedback">
+                    <div id = "validacion5" class="invalid-feedback">
                       Ingrese una ubicación valida
                     </div>
       
@@ -157,7 +168,7 @@ array_pop($resultado);
       <br>
     </section>
   
-  <script src="javascript/validacionFormularioCompradoresEditar.js"></script>
+  <script src="javascript/validacionFormularioCompradores.js"></script>
   <script src="javascript/paraElOjo.js"></script>
   <script src="javascript/confirmacionContraseña.js"></script>
   <script src="javascript/paraElOjoConfirmar.js"></script>

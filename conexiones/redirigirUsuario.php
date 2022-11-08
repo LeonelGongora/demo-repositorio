@@ -26,8 +26,6 @@
         while ($row = mysqli_fetch_row($consultaIdVendedores)) {
             $last_id = $row[0];
             $_SESSION['idUsuario'] = $last_id;
-
-            echo $_SESSION['idUsuario'];
          }
 
             $url= '../paginaPrincipalVendedores.php';
@@ -35,24 +33,14 @@
            
     }else if(mysqli_num_rows($consultaCompradores) > 0){
 
-        $query = "INSERT INTO compradores(contrasenia,  Email) VALUES ('$password', '$email')";
-        $insertar = $conn->query($query);
-
-        if($insertar){
-
-            $last_id = $conn->insert_id;
+        while ($row = mysqli_fetch_row($consultaCompradores)) {
+            $last_id = $row[0];
             $_SESSION['idUsuario'] = $last_id;
-    
-            $query1 = "DELETE FROM compradores ORDER BY id DESC LIMIT 1";
-            $insertar1 = $conn->query($query1);
+        }
 
-            echo $_SESSION['idUsuario'];
-        
-            //$url= '../paginaPrincipalCompradores.php';
-            //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-           }else{
-            echo "Los datos no pudieron insertarse";
-        } 
+        $url= '../paginaPrincipalCompradores.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+           
 
     }else{
         $url= '../loginFallido.php';
