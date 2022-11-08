@@ -40,37 +40,18 @@
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
        $insertar = $conn->query($query);
 
-       $last_id = $conn->insert_id;
-       echo "New record created successfully. Last inserted ID is: " . $last_id;
+       if($insertar){
 
-       $_SESSION['idUsuario'] = $last_id;
-       echo $_SESSION['idUsuario'];
+        $last_id = $conn->insert_id;
+        echo "New record created successfully. Last inserted ID is: " . $last_id;
 
-       /* if($insertar){
-        $result = mysqli_query($conn,"SELECT id, NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1"); 
-        if(!$result){
-            echo "ocurrio un error";
-            exit;
-        }
-        for($i = 0; $resultado[$i] = mysqli_fetch_assoc($result); $i++) ;
-        // Delete last empty one
-        array_pop($resultado); 
-        if (is_array($resultado) || is_object($resultado)): {foreach($resultado as $row): 
-
-            echo base64_encode($row['id']);
-
-        endforeach;} endif;
-
-        $_SESSION['idUsuario'] = base64_encode($row['id']);
-        echo $_SESSION['idUsuario'];
-
-
-     
-
-        //$url= '../paginaPrincipalVendedores.php';
-        //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+        $_SESSION['idUsuario'] = $last_id;
+    
+        $url= '../paginaPrincipalVendedores.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
        }else{
-        echo "La imagen no pudo insertarse";
-       } */
+        echo "Los datos no pudieron insertarse";
+       } 
+       
     } 
 ?>
