@@ -39,7 +39,9 @@
 
        $query = "INSERT INTO vendedores(NombreNegocio, contrasenia,  Email, Telefono, Ubicacion, Descripcion, ImagenVendedor) VALUES ('$Name', '$password', '$email', '$number', '$ubicacion', '$descripcion', '$imagen')";
        $insertar = $conn->query($query);
-       
+       echo "New record has id: " . $mysqli -> insert_id;
+
+
        $idPrueba = $mysqli -> insert_id;
        echo "Prueba de ID:";
        echo $idPrueba;
