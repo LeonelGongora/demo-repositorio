@@ -43,6 +43,9 @@
        $last_id = $conn->insert_id;
        echo "New record created successfully. Last inserted ID is: " . $last_id;
 
+       $_SESSION['idUsuario'] = $last_id;
+       echo $_SESSION['idUsuario'];
+
        /* if($insertar){
         $result = mysqli_query($conn,"SELECT id, NombreNegocio, contrasenia, Email, Telefono, Ubicacion, Descripcion, ImagenVendedor FROM vendedores WHERE vendedores.Email = '$ema' AND vendedores.contrasenia = '$pas' LIMIT 1"); 
         if(!$result){
