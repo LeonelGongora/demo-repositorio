@@ -24,8 +24,6 @@
         $consultaIdVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$email' AND vendedores.contrasenia = '$password' LIMIT 1");
 
         while ($row = mysqli_fetch_row($consultaIdVendedores)) {
-            print("ID: ".$row[0]."\n");
-            
             $last_id = $row[0];
             $_SESSION['idUsuario'] = $last_id;
 
