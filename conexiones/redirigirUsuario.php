@@ -13,9 +13,65 @@
     $_SESSION['email1'] = $_POST['Email'];
     $_SESSION['pass1'] = $_POST['password'];
 
-    $emailactual = $_SESSION['email1'];
-    $passactual = $_SESSION['pass1'];
+    $email = $_SESSION['email1'];
+    $password = $_SESSION['pass1'];
+
+    $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$email' AND vendedores.contrasenia = '$password' LIMIT 1");
+    $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$email' AND compradores.contrasenia = '$password' LIMIT 1");
+
+    if (mysqli_num_rows($consultaVendedores) > 0){
+
+        $query = "INSERT INTO vendedores(contrasenia,  Email) VALUES ('$password', '$email')";
+        $insertar = $conn->query($query);
+
+        if($insertar){
+
+            $last_id = $conn->insert_id;
+            $_SESSION['idUsuario'] = $last_id;
     
+            $query1 = "DELETE FROM vendedores ORDER BY id DESC LIMIT 1";
+            $insertar1 = $conn->query($query1);
+        
+            $url= '../paginaPrincipalVendedores.php';
+            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+           }else{
+            echo "Los datos no pudieron insertarse";
+        } 
+
+    }else if(mysqli_num_rows($consultaCompradores) > 0){
+
+        $query = "INSERT INTO compradores(contrasenia,  Email) VALUES ('$password', '$email')";
+        $insertar = $conn->query($query);
+
+        if($insertar){
+
+            $last_id = $conn->insert_id;
+            $_SESSION['idUsuario'] = $last_id;
+    
+            $query1 = "DELETE FROM compradores ORDER BY id DESC LIMIT 1";
+            $insertar1 = $conn->query($query1);
+        
+            $url= '../paginaPrincipalCompradores.php';
+            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+           }else{
+            echo "Los datos no pudieron insertarse";
+        } 
+
+    }else{
+        $url= '../loginFallido.php';
+        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+    } 
+
+    
+
+    
+
+    //delete from marks order by id desc limit 1
+    
+
+    
+
+    /* 
 
     $consultaIdCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
     $consultaIdVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
@@ -32,21 +88,12 @@
         $url= '../loginFallido.php';
         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
     }
+    
+    
+    
+    
 
-    /* $consultaVendedores = mysqli_query($conn,"SELECT * FROM vendedores WHERE Email = '$emailactual' AND vendedores.contrasenia = '$passactual' LIMIT 1");
-    $consultaCompradores = mysqli_query($conn,"SELECT * FROM compradores WHERE Email = '$emailactual' AND compradores.contrasenia = '$passactual' LIMIT 1");
-
-    if (mysqli_num_rows($consultaVendedores) > 0){
-        $url = '../paginaPrincipalVendedores.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-
-    }else if(mysqli_num_rows($consultaCompradores) > 0){
-        $url= '../paginaPrincipalCompradores.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    }else{
-        $url= '../loginFallido.php';
-        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    } */
+    */
 
     
 ?>
