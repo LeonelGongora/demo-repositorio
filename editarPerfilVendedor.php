@@ -84,7 +84,7 @@ array_pop($resultado);
                             <div class="col-lg-10">
                                 <label for="password" class="form-label">Contraseña:</label>
                                  <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password" aria-describedby="basic-addon1" pattern = "^[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
-                                 <div id = "validacion2" class="invalid-feedback">
+                                 <div id = "validacion3" class="invalid-feedback">
                                     La contrasea debe tener un minimo de 6 caracteres y maximo 14
                                   </div>
 
@@ -102,7 +102,7 @@ array_pop($resultado);
                           <div class="col">
                               <label for="Telefono" class="form-label">Teléfono: </label>
                              <input type="text" value="<?php echo $row['Telefono'];?>" name="Telefono" id="Telefono" class="form-control" pattern = "[7|6][0-9]{7}$" required></input>
-                             <div id = "validacion3" class="invalid-feedback">
+                             <div id = "validacion4" class="invalid-feedback">
                                 El teléfono debe tener 8 digitos y comenzar con el 6 o el 7
                              </div>
                           </div>
@@ -110,7 +110,7 @@ array_pop($resultado);
                           <div class="col">
                             <label for="Ubicacion" class="form-label">Ubicación: </label>
                             <input type="text" value="<?php echo $row['Ubicacion'];?>" name="Ubicacion" id="Ubicacion" class="form-control" placeholder="https://goo.gl/maps/........." pattern = "https:\/\/goo.gl\/maps+\/\w+|https:\/\/maps.app.goo.gl\/\w+|" required>
-                            <div id = "validacion4" class="invalid-feedback">
+                            <div id = "validacion5" class="invalid-feedback">
                               Ingrese una ubicación valida
                             </div>
                           </div>
