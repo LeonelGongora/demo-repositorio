@@ -48,7 +48,9 @@ array_pop($resultado);
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
-        <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
+        <a href ="paginaPrincipalCompradores.php">
+            <img src="imagenes/Logo-Barra.jpeg" height="45px" alt="logo"> 
+        </a>
         <a class="navbar-brand" href="paginaPrincipalCompradores.php">Imperfect Food</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
