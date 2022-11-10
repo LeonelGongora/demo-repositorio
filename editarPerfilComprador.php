@@ -57,7 +57,7 @@ array_pop($resultado);
   
   
   <section class="fondoCompradores">  
-    <div class = "container">
+    <div class = "container" style="font-family:Arial">
           
           <div class="row justify-content-center my-1">
             <form action="conexiones/guardarPerfilComprador.php" method="post" enctype="multipart/form-data" class="needs-validation"
