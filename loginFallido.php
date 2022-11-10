@@ -19,6 +19,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <div>
+            <a href ="index.php">
+                <img src="imagenes/Logo-Barra.jpeg" height="45px" alt="logo"> 
+            </a>
             <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
             <a class="navbar-brand" href="index.php">
               Imperfect Food
