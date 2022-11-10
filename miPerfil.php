@@ -52,7 +52,7 @@
        </div>
     </nav>
 
-    <div class = "row justify-content-center my-4">
+    <div class = "row justify-content-center my-4" style="font-family:Arial">
         <div class="text-center">
             <h2>Mi perfil</h2>
         </div>
@@ -69,7 +69,7 @@
               </div>
             </div>
   
-            <div class="col-lg-5">
+            <div class="col-lg-5" style="font-family:Arial">
               <div class="card mb-4 rounded-0">
                 <div class="card-body rounded-0">
                   <div class="row">
@@ -124,7 +124,7 @@
           </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center" style="font-family:Arial">
             <div class="row justify-content-center my-5">
                 <div class="col-2">
                     <a href="paginaPrincipalVendedores.php" class="btn btn-danger rounded-0" role="button">Volver</a>
