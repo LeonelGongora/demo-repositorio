@@ -34,7 +34,7 @@
 
 
   <section class="fondoVendedores">
-    <div class = "container">
+    <div class = "container" style="font-family:Arial">
         
             <div class="row justify-content-center my-2" style="font-family:Arial;font-size: 16px">
               
