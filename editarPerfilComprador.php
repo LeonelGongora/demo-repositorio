@@ -72,7 +72,7 @@ array_pop($resultado);
                   <div class="col">
                     <label for="NombreNegocio" class="form-label">Nombre:</label>
                     <input type="text" value= "<?php echo $row['NombreNegocio'];?>" name="NombreNegocio" id="NombreNegocio" class="form-control"
-                      pattern="^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,20}$" required>
+                      pattern="^[A-Z|a-z|0-9|`|&|.|\s|!|-|,]{3,40}$" required>
                     <div id = "validacion1" class="invalid-feedback">
                       Ingrese un nombre valido
                     </div>
