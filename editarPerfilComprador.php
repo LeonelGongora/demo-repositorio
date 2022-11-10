@@ -43,8 +43,9 @@ array_pop($resultado);
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-     <img height="45px" alt="logo" src="imagenes/Logo-Barra.jpeg">
-
+     <a href ="paginaPrincipalCompradores.php">
+      <img src="imagenes/Logo-Barra.jpeg" height="45px" alt="logo"> 
+     </a>
      <div class="container-fluid" style="font-family:Helvetica;font-size: 18px">
 
         <a class="navbar-brand" href="paginaPrincipalCompradores.php">Imperfect Food</a>
