@@ -45,7 +45,7 @@
          </div>
        </nav>
     
-        <div class="container py-2">
+        <div class="container py-2" style="font-family:Arial">
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col col-xl-7" style=" margin-top: 50px; border-radius: 10px; box-shadow: 10px 10px 10px -6px black; " >
               <div class="card" style="border :none">
