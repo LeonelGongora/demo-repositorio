@@ -93,7 +93,7 @@ array_pop($resultado);
                     <div class="col">
                       <label for="password" class="form-label">Contraseña:</label>
                       <input name="password" value="<?php echo $row['contrasenia'];?>" type="password" class="form-control" id="password" aria-label="password"
-                        aria-describedby="basic-addon1" pattern="^[A-Z|a-z|0-9|&|$|@|-|%|*|\s|#|,|.|;|+|/]{6,14}$" required />
+                        aria-describedby="basic-addon1" pattern="^\S[A-Z|a-z|0-9|&|$|@|-|%|*|#|,|.|;|+|/]{6,14}$" required />
                       <div id = "validacion3" class="invalid-feedback">
                         La contrasea debe tener un minimo de 6 caracteres y maximo 14
                       </div>
