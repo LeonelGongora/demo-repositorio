@@ -18,7 +18,7 @@
         <div class="container-fluid">
           <div>
             <a href ="index.php">
-            <img src="imagenes/Logo-Barra.jpeg" height="45px" alt="logo"> 
+                <img src="imagenes/Logo-Barra.jpeg" height="45px" alt="logo"> 
             </a>
             <a class="navbar-brand" href="index.php">
               Imperfect Food
