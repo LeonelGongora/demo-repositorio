@@ -72,7 +72,7 @@ array_pop($resultado);
         </div>
       </nav>
  
-      <div class="container my-4">
+      <div class="container my-4" style="font-family:Arial">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
             <?php if (is_array($resultado) || is_object($resultado)): foreach($resultado as $row){ ?> 
               <div class="col">
