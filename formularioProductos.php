@@ -27,7 +27,7 @@
     </nav>
 
 
-    <div class = "container" >
+    <div class = "container" style="font-family:Arial">
             <div class="row justify-content-center my-4" style="font-family:Arial;font-size: 16px">
                     <form action="conexiones/registrarProductos.php" method="post" enctype = "multipart/form-data" class="needs-validation" novalidate>
 
